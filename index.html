@@ -28,29 +28,34 @@
     <header class="header seccion">
         <nav class="menu">
             <div class="menu__logo">
-                <img class="menu__logo--joystick" src="./assets/img/joystick.png" alt="joystick">
-                <img class="menu__logo--alura" src="./assets/img/Alura.png" alt="imagen Alura">
-                <img class="menu__logo--geek" src="./assets/img/Geek.png" alt="imagen Geek">
-            </div>
-            <div class="menu__caja-busqueda">
-                <input type="text" class="menu__caja-busqueda--buscador">
-                <img class="menu__caja-busqueda--lupa" src="./assets/img/lupa.png" alt="Lupa">
+                <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
+                <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
+                <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
             </div>
             <div class="menu__login">
-                <button class="munu__login--boton">Login</button>
+                <button class="menu__login-boton--visible boton">Login</button>
             </div>
+            <div class="menu__caja-busqueda">
+                <input type="text" class="menu__input-buscador">
+                <button class="menu__lupa"></button>
+            </div>
+
         </nav>
-    <!----------------------  banner  -------------------------->
+        <!----------------------  banner  -------------------------->
         <div class="banner">
-            <h2 class="banner__titulo">Abril Promocional</h2> </h2>
-            <p class="banner__descripcion">Productos seleccionados con 33% de descuento</p>
-            <button class="banner__boton">Ver Consolas</button>
+            <div class="banner__container">
+                <h2 class="banner__titulo">Abril Promocional</h2>
+                </h2>
+                <p class="banner__descripcion">Productos seleccionados con 33% de descuento</p>
+                <button class="banner__boton boton">Ver Consolas</button>
+            </div>
         </div>
     </header>
-    
+
     <!----------------------  main  -------------------------->
     <main class="main">
-
+        <br>
+        <br>
         <!--------------Seccion sobre-mi --------------->
         <section class="seccion seccion--azul" id="sobre-mi">
             <div class="sobre-mi">
@@ -67,179 +72,12 @@
                 <div class="sobre-mi__firma"></div>
             </div>
         </section>
-        <!------------    seccion skills      -------------->
-        <section class="seccion" id="skills">
-            <div class="skills-hobbies">
-                <h2 class="skills-hobbies__titulo">Skills</h2>
-                <div class="skills-hobbies__container">
-                    <div class="box">
-                        <div class="box__img box__img--html"></div>
-                        <p class="box__nombre">HMLT</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--css"></div>
-                        <p class="box__nombre">CSS</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--javaScript"></div>
-                        <p class="box__nombre">JavaScript</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--C-sharp"></div>
-                        <p class="box__nombre">C#</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--visual-studio-code"></div>
-                        <p class="box__nombre">VisualStudioCode</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------------    seccion hobbies      -------------->
-        <section class="seccion" id="hobbies">
-            <div class="skills-hobbies">
-                <h2 class="skills-hobbies__titulo">Hobbies</h2>
-                <div class="skills-hobbies__container">
-                    <div class="box">
-                        <div class="box__img box__img--guitar"></div>
-                        <p class="box__nombre">Tocar Guitarra</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--running"></div>
-                        <p class="box__nombre">Running</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--basketball"></div>
-                        <p class="box__nombre">Basketball</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--music"></div>
-                        <p class="box__nombre">Music</p>
-                    </div>
-                    <div class="box">
-                        <div class="box__img box__img--movies"></div>
-                        <p class="box__nombre">Ver Peliculas</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!------------    seccion Formacion Academica      -------------->
-
-        <section class="seccion seccion--azul" id="formacion">
-            <div class="formacion-academica">
-                <h2 class="formacion-academica__titulo">Formacion Academica</h2>
-                <div class="formacion-academica__container">
-                    <div class="big-box">
-                        <div class="big-box__img-container">
-                            <img src="./img/unlp-logo.jpg" class="big-box__img big-box__img--unlp">
-                        </div>
-                        <h3 class="big-box__titulo">Analista Programador Universitario</h3>
-                        <p class="big-box__descripcion">2009 - UNLP</p>
-                    </div>
-
-                    <div class="big-box">
-                        <div class="big-box__img-container">
-                            <img src="./img/google-activate-logo.png"
-                                class="big-box__img big-box__img--google-activate">
-                        </div>
-                        <h3 class="big-box__titulo">Introduccion al Desarrollo Web</h3>
-                        <p class="big-box__descripcion">2021 - Google Actívate</p>
-                    </div>
-
-                    <div class="big-box">
-                        <div class="big-box__img-container">
-                            <img src="./img/alura-logo.jpg" class="big-box__img big-box__img--alura">
-                        </div>
-                        <h3 class="big-box__titulo">Desarrollador Web Front-End</h3>
-                        <p class="big-box__descripcion">2021 - Alura</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!------------    seccion Experiencia profesional      -------------->
-        <section class="seccion" id="proyectos">
-            <h2 class="proyectos-todos__titulo">Experiencia Profesional</h2>
-            <div class="proyectos-todos__contenedor">
-
-                <!------------  __ proyecto encriptador __  ----------->
-
-                <div class="proyecto">
-                    <div class="proyecto__container-imagen">
-                        <img class="proyecto__imagen" src="./img/encriptador-captura.jpg" alt="Encriptador de texto"
-                            title="Encriptador de texto">
-                    </div>
-                    <div class="proyecto__descripcion">
-                        <div class="proyecto__titulo">Encriptador De Texto</div>
-                        <div class="proyecto__texto">Challenge Oracle</div>
-                        <div class="proyecto__botones">
-                            <a class="boton proyecto__boton proyecto__boton--repositorio"
-                                href="https://github.com/MartinAlcaraz/challenge-oracle-encriptador" target="_blank">
-                                Repositorio
-                            </a>
-                            <a class="boton proyecto__boton proyecto__boton--ver-demo"
-                                href="https://martinalcaraz.github.io/challenge-oracle-encriptador/" target="_blank">
-                                Ver Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!------------ __ proyecto ahorcado __ ----------->
-                <div class="proyecto">
-                    <div class="proyecto__container-imagen">
-                        <img class="proyecto__imagen" src="./img/ahorcado-captura.jpg" alt="Juego del ahorcado"
-                            title="Juego del ahorcado">
-                    </div>
-                    <div class="proyecto__descripcion">
-                        <div class="proyecto__titulo">Juego del ahorcado</div>
-                        <div class="proyecto__texto">Challenge de Oracle</div>
-                        <div class="proyecto__botones">
-                            <a class="boton proyecto__boton proyecto__boton--repositorio"
-                                href="https://github.com/MartinAlcaraz/Challenge-Oracle-Ahorcado" target="_blank">
-                                Repositorio
-                            </a>
-                            <a class="boton proyecto__boton proyecto__boton--ver-demo"
-                                href="https://martinalcaraz.github.io/Challenge-Oracle-Ahorcado/" target="_blank">
-                                Ver Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!------------ __ proyecto barberia __ ----------->
-                <div class="proyecto">
-                    <div class="proyecto__container-imagen">
-                        <img class="proyecto__imagen" src="./img/barberia-captura.jpg" alt="Pagina web barberia"
-                            title="Barberia">
-                    </div>
-                    <div class="proyecto__descripcion">
-                        <div class="proyecto__titulo">Pagina web Barberia</div>
-                        <div class="proyecto__texto">Pagina web responsive</div>
-                        <div class="proyecto__botones">
-                            <a class="boton proyecto__boton proyecto__boton--repositorio"
-                                href="https://github.com/MartinAlcaraz/Barberia-alura-3" target="_blank">
-                                Repositorio
-                            </a>
-                            <a class="boton proyecto__boton proyecto__boton--ver-demo"
-                                href="https://martinalcaraz.github.io/Barberia-alura-3/index.html" target="_blank">
-                                Ver Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
         <!----------------------- seccion contacto ------------------------->
         <section class="seccion seccion--azul seccion-contacto">
             <div class="contacto">
 
-                <img class="contacto__imagen" src="./img/telefono.svg">
+                <img class="contacto__imagen">
 
                 <div class="contacto__texto">
                     <h3 class="contacto__titulo">Contacto</h3>
@@ -305,11 +143,11 @@
     </main>
     <!----------------------  footer  -------------------------->
     <footer class="footer">
-        <a href="#top"> <img class="footer__img" src="./img/logo-M.png"></a>
+        <a href="#top"> <img class="footer__img" src="./assets/img/logo-M.png"></a>
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
-    <script type="module" src="./js/script.js"></script>
+    <script></script>
 </body>
 
 </html>
