@@ -1,14 +1,15 @@
 
 :root{
-   --texto-blanco: #fff;
+   --texto-blanco: #FFFFFF;
    --texto-gris: #464646;
    --texto-gris-claro: #767676;
    --texto-blanco-boton: #FFFFFF;
+   --texto-azul: #2A7AE4;
    --texto-azul-boton: #2A7AE4;
    --warning-color: rgb(206, 35, 35);
 
    --bg-gris: #F5F5F5;
-   --bg-azul: #EAF2FD;
+   --bg-celeste: #EAF2FD;
    --bg-blanco: #FFF;
    --bg-boton-azul: #2A7AE4;
 
@@ -16,6 +17,7 @@
 
 *{
    box-sizing: border-box;
+   color: var(--texto-gris);
 }
 
 body{

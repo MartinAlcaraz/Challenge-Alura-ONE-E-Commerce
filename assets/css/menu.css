@@ -10,12 +10,19 @@
    width: 100%;
 }
 
+.menu__logo-enlace {
+   text-decoration: none;
+   display: inline-block;
+   width: 100%;
+}
+
 .menu__logo {
-   width: 25%;
+   margin-left: 5px;
    height: auto;
    display: flex;
    align-items: center;
-   
+   width: 26%;
+   min-width: 105px;   
 }
 
 .menu__logo--joystick {
@@ -46,8 +53,9 @@
    align-items: center;   
    justify-content: space-between;
    height: auto;
-   padding: 0px 16px;
-   width: 15%;
+   padding: 0px;
+   width: 10%;
+   transition: width 0.3s linear;
 }
 
 .menu__input-buscador {
@@ -57,6 +65,10 @@
    display: inline-block;
    width: 0%;
 
+}
+
+.menu__input-buscador:focus {
+   outline: none;
 }
 
 .menu__lupa {   
@@ -76,7 +88,7 @@
 .menu__caja-busqueda:hover {
    background-color: var(--bg-gris);
    padding: 5px 16px;
-   width: 30%;
+   width: 100%;
 }
 
 .menu__caja-busqueda:hover .menu__input-buscador {
@@ -86,14 +98,14 @@
 
 .menu__login {
    display: block;
-   width: 40%;
+   width: 35%;
    height: auto;
 }
 
 .menu__login-boton--visible {
    display: inline-block;
    background-color: var(--bg-blanco);
-   width: 11rem;
+   width: 100%;
 }
 
 .menu__login-boton--invisible {
@@ -128,12 +140,13 @@
 }
 
 .banner__titulo {
+   color: var(--texto-blanco);
    font-size: 700;
-   
 
 }
 
 .banner__descripcion {
+   color: var(--texto-blanco);
    font-size: 600;
    margin: 8px 0px;
 }

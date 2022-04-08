@@ -18,19 +18,27 @@
 
 
     <link href="./assets/css/menu.css" rel="stylesheet" />
-    <link href="./assets/css/contacto.css" rel="stylesheet">
+    <link href="./assets/css/productos.css" rel="stylesheet" />
+    <link href="./assets/css/info.css" rel="stylesheet" />
+    <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
+    <link href="./assets/css/info-contacto.css" rel="stylesheet" />
+
     <link href="./assets/css/footer.css" rel="stylesheet" />
+
 
 </head>
 
 <body id="top">
     <!----------------------  header  -------------------------->
     <header class="header seccion">
+        <!-- == menu == -->
         <nav class="menu">
             <div class="menu__logo">
-                <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
-                <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
-                <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
+                <a class="menu__logo-enlace" href="#">
+                    <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
+                    <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
+                    <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
+                </a>
             </div>
             <div class="menu__login">
                 <button class="menu__login-boton--visible boton">Login</button>
@@ -54,89 +62,240 @@
 
     <!----------------------  main  -------------------------->
     <main class="main">
-        <br>
-        <br>
-        <!--------------Seccion sobre-mi --------------->
-        <section class="seccion seccion--azul" id="sobre-mi">
-            <div class="sobre-mi">
-                <h2 class="sobre-mi__titulo">Sobre mi</h2>
-                <p class="sobre-mi__descripcion">
-                    Hola, tengo 36 años y soy de Argentina, me encanta la programacion y el desarrollo de
-                    paginas web. <br>
-                    Empecé mis estudios en la UNLP (Facultad de Informatica de La Plata) y segui
-                    estudiando de forma autodidacta haciendo distintos cursos de programacion. Luego inicié
-                    el curso de desarrollo web Front-End en el programa <strong>ONE Oracle Next Education</strong>.
-                    Mi objetivo es seguir aprendiendo y lograr trabajar de esto que tanto me apasiona.
-                </p>
 
-                <div class="sobre-mi__firma"></div>
+        <section class="seccion__productos seccion__productos--starwars">
+
+            <div class="productos__encabezado">
+                <h2 class="productos__titulo">Starwars</h2>
+                <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                        src="./assets/img/flecha.svg"></a>
+            </div>
+
+            <div class="productos__grilla">
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-01.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-02.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-03.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-04.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-05.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-06.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
             </div>
         </section>
 
-        <!----------------------- seccion contacto ------------------------->
-        <section class="seccion seccion--azul seccion-contacto">
-            <div class="contacto">
+        <!-- ===================  seccion consolas  =============================== -->
 
-                <img class="contacto__imagen">
+        <section class="seccion__productos seccion__productos--consolas">
 
-                <div class="contacto__texto">
-                    <h3 class="contacto__titulo">Contacto</h3>
-                    <p class="contacto__parrafo">¿Quieres contactarme?<br>
-                        Complete el siguiente formulario y me pondré en contacto con usted
-                        lo antes posible.
-                    </p>
+            <div class="productos__encabezado">
+                <h2 class="productos__titulo">Consolas</h2>
+                <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                        src="./assets/img/flecha.svg"></a>
+            </div>
 
-                    <form class="contacto__formulario" action="">
-
-                        <!--  ========  input name  =========  -->
-                        <div class="input-container">
-                            <input class="input" name="name" id="name" type="text" autocomplete="off"
-                                placeholder="Nombre" data-tipo="nombre" required>
-                            <label class="input-label" for="name">Nombre</label>
-                            <span class="input__bar"></span>
-                            <span class="message-error">Este campo no es valido</span>
-                        </div>
-
-                        <!--  ========  input E-mail  =========  -->
-                        <div class="input-container">
-                            <input class="input" name="email" id="email" type="email" autocomplete="off"
-                                placeholder="E-mail" data-tipo="email"
-                                pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" required>
-
-                            <!-- pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" -->
-
-                            <label class="input-label" for="email">E-mail</label>
-                            <span class="input__bar"></span>
-                            <span class="message-error">Este campo no es valido</span>
-                        </div>
-
-                        <!--  ========  input Asunto  =========  -->
-                        <div class="input-container">
-                            <input class="input" name="asunto" id="asunto" type="text" autocomplete="off"
-                                placeholder="Asunto" data-tipo="asunto" required>
-                            <label class="input-label" for="asunto">Asunto</label>
-                            <span class="input__bar"></span>
-                            <span class="message-error">Este campo no es valido</span>
-                        </div>
-
-                        <!--  ========  input Mensaje  =========  -->
-                        <div class="textarea-container">
-                            <textarea class="textarea input" name="mensaje" type="text" rows="4" autocomplete="off"
-                                placeholder="Mensaje" data-tipo="mensaje" required></textarea>
-                            <label class="textarea-label" for="mensaje">Mensaje</label>
-                            <span class="textarea__bar"></span>
-
-                            <span class="message-error">Este campo no es valido</span>
-
-                        </div>
-
-                        <!--  ========  input Submit  =========  -->
-                        <input class="form__boton-enviar--disabled" type="submit" data-submit value="Enviar mensaje"
-                            disabled>
-
-                    </form>
-
+            <div class="productos__grilla">
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-01.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
                 </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-02.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-03.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-04.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-05.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-06.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================  seccion diversos  =============================== -->
+
+        <section class="seccion__productos seccion__productos--diversos">
+
+            <div class="productos__encabezado">
+                <h2 class="productos__titulo">Diversos</h2>
+                <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                        src="./assets/img/flecha.svg"></a>
+            </div>
+
+            <div class="productos__grilla">
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-01.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-02.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-03.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-04.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-05.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-06.png"
+                            alt="imagen producto"></a>
+                    <p class="item__nombre">Producto XYZ</p>
+                    <p class="item__precio">$ 60.00</p>
+                    <a class="item__enlace" href="#">Ver producto</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================  seccion informacion  =============================== -->
+
+        <section class="info">
+            <div class="info__quienes-somos">
+                <div class="info__logo">
+                    <a class="info__logo-enlace" href="#">
+                        <img class="info__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
+                        <img class="info__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
+                        <img class="info__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
+                    </a>
+                </div>
+                <div class="info__container-enlaces">
+                    <a class="info__enlace" href="#">Quienes somos</a>
+                    <a class="info__enlace" href="#">Politica de privacidad</a>
+                    <a class="info__enlace" href="#">Programa de fidelidad</a>
+                    <a class="info__enlace" href="#">Nuestras tiendas</a>
+                    <a class="info__enlace" href="#">Quiero ser franquiciado</a>
+                    <a class="info__enlace" href="#">Anuncie aquí</a>
+                </div>
+            </div>
+            <div class="info__contacto">
+                <h3 class="contacto__titulo">Hable con nosotros</h3>
+                <form class="contacto__formulario" action="">
+
+                    <!--  ========  input name  =========  -->
+                    <div class="contacto__input-container">
+                       <input class="input" name="name" id="name" type="text" autocomplete="off" placeholder="Nombre"
+                          data-tipo="nombre" required>
+                       <label class="input-label" for="name">Nombre</label>
+                       <span class="input__bar"></span>
+                       <span class="message-error">Este campo no es valido</span>
+                    </div>
+  
+  
+                    <!--  ========  input Mensaje  =========  -->
+                    <div class="contacto__textarea-container">
+                       <textarea class="textarea input" name="mensaje" type="text" rows="4" 
+                          autocomplete="off" placeholder="Mensaje" data-tipo="mensaje" required></textarea>
+                       <label class="textarea-label" for="mensaje">Mensaje</label>
+                       <span class="textarea__bar"></span>
+  
+                       <span class="message-error">Este campo no es valido</span>
+  
+                    </div>
+  
+                    <!--  ========  input Submit  =========  -->
+                    <input class="contacto__boton-enviar--disabled" type="submit" data-submit value="Enviar mensaje">
+  
+                 </form>
             </div>
         </section>
 
