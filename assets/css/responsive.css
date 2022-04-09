@@ -1,0 +1,123 @@
+@media screen and (max-width: 400px) {
+    .banner__titulo {
+        font-size: 20px;
+    }
+
+    .banner__descripcion {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+
+    .banner__container {
+        margin: 15px 20px;
+    }
+
+    .banner__titulo {
+        font-size: 42px;
+        margin: 10px 0;
+        line-height: 32px;
+    }
+
+    .banner__descripcion {
+        font-size: 18px;
+        margin: 10px 0px;
+        line-height: 22px;
+    }
+
+    .banner__boton {
+        font-size: 16px;
+        line-height: 24px;
+        width: 11rem;
+    }
+    
+    .menu {
+        padding: 0 1%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .banner__container {
+        margin: 32px 40px;
+    }
+
+    .banner__titulo {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .banner__descripcion {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .banner__boton {
+        font-size: 18px;
+        line-height: 32px;
+        width: 12rem;
+    }
+
+    .menu {
+        height: 5.5rem;
+        padding: 0 2%;
+    }
+
+    .menu__logo{
+        order: 1;
+        width: 15%;
+    }
+
+    .menu__caja-busqueda{
+        order: 2;
+    }
+
+    .menu__login {
+        order: 3;
+        
+    }
+
+    .menu__logo--joystick {
+        height: 24px;
+    }
+
+    .menu__logo--alura {
+        height: 18px;
+    }
+
+    .menu__logo--geek {
+        height: 18px;
+    }
+
+
+    .menu__caja-busqueda {
+        background-color: var(--bg-gris);
+        padding: 5px 16px;
+        margin-right: 15%;
+        width: 35%;
+    }
+
+    .menu__caja-busqueda:hover {
+        width: 35%;
+    }
+
+    .menu__caja-busqueda:hover .menu__input-buscador {
+        width: 100%;
+    }
+
+    .menu__input-buscador {
+        display: block;
+        width: 100%;
+    }
+
+    .menu__login {
+        display: block;
+        width: 20%;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {}

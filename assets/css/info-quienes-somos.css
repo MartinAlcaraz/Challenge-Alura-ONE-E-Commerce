@@ -4,26 +4,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .info__logo {
-    margin: 10px auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    width: 50%;
- }
+   text-decoration: none;
+   height: auto;
+   display: flex;
+   align-items: center;
+   margin: 1rem auto;
+}
 
 .info__logo-enlace {
    text-decoration: none;
    display: inline-block;
-   width: 100%;
+   width: auto;
 }
  
  .info__logo--joystick {
     margin-right: 3px;
     width: 40px;
+    vertical-align:bottom;
  }
  
  .info__logo--alura {

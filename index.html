@@ -24,6 +24,7 @@
     <link href="./assets/css/info-contacto.css" rel="stylesheet" />
 
     <link href="./assets/css/footer.css" rel="stylesheet" />
+    <link href="./assets/css/responsive.css" rel="stylesheet" />
 
 
 </head>
@@ -33,18 +34,18 @@
     <header class="header seccion">
         <!-- == menu == -->
         <nav class="menu">
-            <div class="menu__logo">
-                <a class="menu__logo-enlace" href="#">
-                    <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
-                    <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
-                    <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
-                </a>
-            </div>
+
+            <a class="menu__logo" href="#">
+                <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
+                <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
+                <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
+            </a>
+
             <div class="menu__login">
                 <button class="menu__login-boton--visible boton">Login</button>
             </div>
             <div class="menu__caja-busqueda">
-                <input type="text" class="menu__input-buscador">
+                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?">
                 <button class="menu__lupa"></button>
             </div>
 
@@ -273,29 +274,29 @@
 
                     <!--  ========  input name  =========  -->
                     <div class="contacto__input-container">
-                       <input class="input" name="name" id="name" type="text" autocomplete="off" placeholder="Nombre"
-                          data-tipo="nombre" required>
-                       <label class="input-label" for="name">Nombre</label>
-                       <span class="input__bar"></span>
-                       <span class="message-error">Este campo no es valido</span>
+                        <input class="input" name="name" id="name" type="text" autocomplete="off" placeholder="Nombre"
+                            data-tipo="nombre" required>
+                        <label class="input-label" for="name">Nombre</label>
+                        <span class="input__bar"></span>
+                        <span class="message-error">Este campo no es valido</span>
                     </div>
-  
-  
+
+
                     <!--  ========  input Mensaje  =========  -->
                     <div class="contacto__textarea-container">
-                       <textarea class="textarea input" name="mensaje" type="text" rows="4" 
-                          autocomplete="off" placeholder="Mensaje" data-tipo="mensaje" required></textarea>
-                       <label class="textarea-label" for="mensaje">Mensaje</label>
-                       <span class="textarea__bar"></span>
-  
-                       <span class="message-error">Este campo no es valido</span>
-  
+                        <textarea class="textarea input" name="mensaje" type="text" rows="4" autocomplete="off"
+                            placeholder="Mensaje" data-tipo="mensaje" required></textarea>
+                        <label class="textarea-label" for="mensaje">Mensaje</label>
+                        <span class="textarea__bar"></span>
+
+                        <span class="message-error">Este campo no es valido</span>
+
                     </div>
-  
+
                     <!--  ========  input Submit  =========  -->
                     <input class="contacto__boton-enviar--disabled" type="submit" data-submit value="Enviar mensaje">
-  
-                 </form>
+
+                </form>
             </div>
         </section>
 
