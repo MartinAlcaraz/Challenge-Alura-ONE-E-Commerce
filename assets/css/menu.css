@@ -96,9 +96,9 @@
    margin-right: 10px;
 }
 
-.menu__login-boton--visible {
-   display: inline-block;
+.menu__login-boton {
    background-color: var(--bg-blanco);
+   display: inline-block;
    width: 100%;
 }
 
@@ -106,9 +106,6 @@
    display: none;
 }
 
-.menu__login--boton {
-   width: 100%;
-}
 
 
 /* =========== banner ============= */
