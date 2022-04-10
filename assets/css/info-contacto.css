@@ -165,11 +165,11 @@ box-shadow: none;
 .contacto__textarea-container {
  font-weight: 400;
  position: relative;
- margin-bottom: 1rem;
+ margin-bottom: 0rem;
 }
 
 .textarea {  
- height: 7rem;  
+ height: 5.5rem;  
  resize: none;
 }
 

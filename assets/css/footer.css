@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-around;
     height: 140px;
+    padding: 1rem 0;
 }
 
 .footer__img{

@@ -1,5 +1,5 @@
 .seccion__productos {
-    margin: 10px 10px 70px;
+    padding: 0.5rem 0.5rem 2rem;
 }
 
 .productos__encabezado {
@@ -40,6 +40,10 @@
 .item{
     width: 100%;
     height: auto;
+}
+
+.item:nth-of-type(n+ 5){        /* n+ 5  ===>  selecciona a partir del 5to elemento de   */
+    display: none;              /*    clase item para no mostrar los items  */
 }
 
 .item__imagen {    
