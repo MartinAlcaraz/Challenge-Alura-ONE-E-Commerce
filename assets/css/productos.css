@@ -1,5 +1,9 @@
-.seccion__productos {
-    padding: 0.5rem 0.5rem 2rem;
+.bloque__productos{
+    margin: 0 1rem;
+ }
+
+.productos {
+    padding: 0.5rem 0rem 2rem;
 }
 
 .productos__encabezado {
@@ -32,9 +36,9 @@
 
 .productos__grilla {
     display: grid;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 48.5% 48.5%;
     grid-template-rows: auto;
-    grid-gap: 2%;
+    grid-gap: 3%;
 }
 
 .item{

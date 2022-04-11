@@ -3,6 +3,7 @@
    --texto-blanco: #FFFFFF;
    --texto-gris: #464646;
    --texto-gris-claro: #767676;
+   --texto-gris-mas-claro: #A2A2A2;
    --texto-blanco-boton: #FFFFFF;
    --texto-azul: #2A7AE4;
    --texto-azul-boton: #2A7AE4;
@@ -26,9 +27,9 @@ body{
    font-family: 'Raleway',  sans-serif;
    font-size: 16px;
    font-weight: 500;   
-   line-height: 19px;
-   
+   line-height: 19px;   
 }
+
 
 .boton {
    display: inline-block;
@@ -53,4 +54,5 @@ body{
    transform: translate(2px,2px);
    box-shadow: none;
 }
+
 

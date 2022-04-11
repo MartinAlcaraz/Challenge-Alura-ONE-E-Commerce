@@ -1,7 +1,7 @@
 
-.info {
+.bloque__informacion {
     background-color: var(--bg-celeste);
     margin-top: 2rem;
-    padding: 0 0.5rem 1.5rem;
+    padding: 0 1rem 1.5rem;
     display: block;
 }
