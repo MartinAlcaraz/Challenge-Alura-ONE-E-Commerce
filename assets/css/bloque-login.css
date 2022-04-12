@@ -1,9 +1,11 @@
+
 .bloque__login {
+    display: none;
     padding: 6rem 0rem 4rem;
 }
 
-.bloque__login--invisible {
-    display: none;
+.bloque__login--visible {
+    display: block;
 }
 
 .login__titulo {

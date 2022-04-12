@@ -1,0 +1,38 @@
+.item-seleccionado {}
+
+.item-seleccionado__imagen {
+
+    background: url(../img/productos/starwars-02.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vw;
+    width: 100%;
+
+}
+
+.item-seleccionado__info,
+.productos-similares {
+    margin: 0 1rem;
+}
+
+.item-seleccionado__nombre {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 1rem 0 0;
+}
+
+.item-seleccionado__precio {
+    margin: 0.5rem 0 0;
+}
+
+.item-seleccionado__descripcion {
+    margin: 0.5rem 0 0;
+}
+
+.productos-similares__titulo {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 2rem 0 1rem;
+}

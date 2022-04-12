@@ -20,8 +20,8 @@
     <link href="./assets/css/menu.css" rel="stylesheet" />
     <link href="./assets/css/productos.css" rel="stylesheet" />
 
-    <link href="./assets/css/bloque-login.css" rel="stylesheet"/>
-
+    <link href="./assets/css/bloque-login.css" rel="stylesheet" />
+    <link href="./assets/css/bloque-productos-similares.css" rel="stylesheet" />
 
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
@@ -256,6 +256,38 @@
 
         </div>
 
+        <!-- =============== bloque producto - productos similares ================= -->
+
+        <div class="bloque__productos-similares" id="bloque-productos-similares">
+            <div class="item-seleccionado__imagen"></div>
+            <div class="item-seleccionado__info">
+                <p class="item-seleccionado__nombre">Producto XYZ</p>
+                <p class="item-seleccionado__precio">$ 60.00</p>
+                <p class="item-seleccionado__descripcion"> Lorem ipsum asdf casdf ss dsaf sdfa sd a sadf a asdf sad asdf
+                    asdf as qer grew bbf d dgfe ert dfg d eertwrt dfgfdg.</p>
+            </div>
+            <div class="productos-similares">
+                <h2 class="productos-similares__titulo">Productos similares</h2>
+                <div class="productos__grilla">
+                    <div class="item">
+                        <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-03.png"
+                                alt="imagen producto"></a>
+                        <p class="item__nombre">Producto XYZ</p>
+                        <p class="item__precio">$ 60.00</p>
+                        <a class="item__enlace" href="#">Ver producto</a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-04.png"
+                                alt="imagen producto"></a>
+                        <p class="item__nombre">Producto XYZ</p>
+                        <p class="item__precio">$ 60.00</p>
+                        <a class="item__enlace" href="#">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!--  ========  bloque login  =========  -->
 
@@ -263,11 +295,14 @@
             <h3 class="login__titulo">Iniciar sesión</h3>
             <form class="login__formulario" action="">
 
-                <input class="login__input login__input--email" name="email" type="email" autocomplete="off" placeholder="Escriba su correo electrónico" pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" required>
+                <input class="login__input login__input--email" name="email" type="email" autocomplete="off"
+                    placeholder="Escriba su correo electrónico" pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$"
+                    required>
                 <!-- pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" -->
 
-                <input class="login__input login__input--password" name="password"  type="password" autocomplete="off" placeholder="Escriba su contraseña" required>
-                
+                <input class="login__input login__input--password" name="password" type="password" autocomplete="off"
+                    placeholder="Escriba su contraseña" required>
+
                 <input type="submit" class="login__input login__input--submit" value="Entrar">
 
             </form>
