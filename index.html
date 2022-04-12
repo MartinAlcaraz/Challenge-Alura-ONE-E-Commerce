@@ -19,6 +19,10 @@
 
     <link href="./assets/css/menu.css" rel="stylesheet" />
     <link href="./assets/css/productos.css" rel="stylesheet" />
+
+    <link href="./assets/css/bloque-login.css" rel="stylesheet"/>
+
+
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
     <link href="./assets/css/info-contacto.css" rel="stylesheet" />
@@ -35,14 +39,14 @@
         <!-- == menu == -->
         <nav class="menu">
 
-            <a class="menu__logo" href="#">
+            <a class="menu__logo" href="#" id="menu-logo">
                 <img class="menu__logo--joystick" src="./assets/img/joystick.svg" alt="joystick">
                 <img class="menu__logo--alura" src="./assets/img/alura.svg" alt="imagen Alura">
                 <img class="menu__logo--geek" src="./assets/img/geek.svg" alt="imagen Geek">
             </a>
 
             <div class="menu__login">
-                <button class="menu__login-boton  boton">Login</button>
+                <button class="menu__login-boton  boton" id="boton-login">Login</button>
             </div>
             <div class="menu__caja-busqueda">
                 <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?">
@@ -51,7 +55,7 @@
 
         </nav>
         <!----------------------  banner  -------------------------->
-        <div class="banner">
+        <div class="banner" id="bloque-banner">
             <div class="banner__container">
                 <h2 class="banner__titulo">Abril Promocional</h2>
                 </h2>
@@ -65,7 +69,7 @@
     <main class="main">
 
         <!-- =============== bloque productos ================= -->
-        <div class="bloque__productos">
+        <div class="bloque__productos" id="bloque-productos">
             <section class="productos productos--starwars">
 
                 <div class="productos__encabezado">
@@ -253,7 +257,23 @@
         </div>
 
 
-        
+        <!--  ========  bloque login  =========  -->
+
+        <div class="bloque__login" id="bloque-login">
+            <h3 class="login__titulo">Iniciar sesión</h3>
+            <form class="login__formulario" action="">
+
+                <input class="login__input login__input--email" name="email" type="email" autocomplete="off" placeholder="Escriba su correo electrónico" pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" required>
+                <!-- pattern="^([\w-]\.?)+@([\w-]+\.)+([A-Za-z]{2,4})+$" -->
+
+                <input class="login__input login__input--password" name="password"  type="password" autocomplete="off" placeholder="Escriba su contraseña" required>
+                
+                <input type="submit" class="login__input login__input--submit" value="Entrar">
+
+            </form>
+        </div>
+
+
         <!-- ===================  seccion informacion  =============================== -->
 
         <div class="bloque__informacion">
@@ -314,7 +334,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
-    <script></script>
+    <script src="./assets/script/script.js"></script>
 </body>
 
 </html>

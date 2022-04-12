@@ -134,6 +134,10 @@
    width: 100%;
 }
 
+.banner--invisible {
+   display: none;
+}
+
 .banner__container {
    margin: 1rem;
 }
