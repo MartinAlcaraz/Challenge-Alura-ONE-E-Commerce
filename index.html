@@ -18,6 +18,7 @@
 
 
     <link href="./assets/css/menu.css" rel="stylesheet" />
+    <link href="./assets/css/banner.css" rel="stylesheet" />
     <link href="./assets/css/productos.css" rel="stylesheet" />
 
     <link href="./assets/css/bloque-login.css" rel="stylesheet" />
@@ -259,12 +260,18 @@
         <!-- =============== bloque producto - productos similares ================= -->
 
         <div class="bloque__productos-similares" id="bloque-productos-similares">
-            <div class="item-seleccionado__imagen"></div>
-            <div class="item-seleccionado__info">
-                <p class="item-seleccionado__nombre">Producto XYZ</p>
-                <p class="item-seleccionado__precio">$ 60.00</p>
-                <p class="item-seleccionado__descripcion"> Lorem ipsum asdf casdf ss dsaf sdfa sd a sadf a asdf sad asdf
-                    asdf as qer grew bbf d dgfe ert dfg d eertwrt dfgfdg.</p>
+            <div class="item-seleccionado">
+                <div class="item-seleccionado__imagen"></div>
+                <div class="item-seleccionado__info">
+                    <p class="item-seleccionado__nombre">Producto XYZ</p>
+                    <p class="item-seleccionado__precio">$ 60.00</p>
+                    <p class="item-seleccionado__descripcion"> Voluptas voluptatum quibusdam similique, class debitis alias 
+                        maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio 
+                        sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, 
+                        quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta 
+                        anim magnam.
+                    </p>
+                </div>
             </div>
             <div class="productos-similares">
                 <h2 class="productos-similares__titulo">Productos similares</h2>
@@ -279,6 +286,22 @@
 
                     <div class="item">
                         <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-04.png"
+                                alt="imagen producto"></a>
+                        <p class="item__nombre">Producto XYZ</p>
+                        <p class="item__precio">$ 60.00</p>
+                        <a class="item__enlace" href="#">Ver producto</a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-01.png"
+                                alt="imagen producto"></a>
+                        <p class="item__nombre">Producto XYZ</p>
+                        <p class="item__precio">$ 60.00</p>
+                        <a class="item__enlace" href="#">Ver producto</a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-02.png"
                                 alt="imagen producto"></a>
                         <p class="item__nombre">Producto XYZ</p>
                         <p class="item__precio">$ 60.00</p>
@@ -365,7 +388,7 @@
     </main>
     <!----------------------  footer  -------------------------->
     <footer class="footer">
-        <a href="#top"> <img class="footer__img" src="./assets/img/logo-M.png"></a>
+        <a href="https://github.com/MartinAlcaraz" target="_blank"> <img class="footer__img" src="./assets/img/logo-M.png"></a>
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>

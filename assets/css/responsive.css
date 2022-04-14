@@ -165,6 +165,38 @@
         height: 16px;
     }    
 
+    /* ============= seccion productos-similares ==================== */
+
+    .bloque__productos-similares{
+        margin: 0 2rem;
+     }
+
+    .item-seleccionado {
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .item-seleccionado__imagen {
+        margin: 0rem;
+        height: 21vw;        
+        width: 40%;
+    }
+    .item-seleccionado__nombre {
+        margin: 0;
+    }
+
+    .item-seleccionado__info {
+        margin: 0 0 0 1rem;
+        width: 60%;
+    }
+
+    .productos-similares {
+        margin: 0;
+    }
+    
+
     /* ======= seccion informacion  ========= */
 
 
@@ -252,6 +284,48 @@
         grid-gap: 2%;
     }
  
+
+    /* ============= seccion productos-similares ==================== */
+
+    .bloque__productos-similares{
+        margin: 0 7%;
+     }
+
+    .item-seleccionado {
+        align-items: center;
+        margin: 4rem 0;
+    }
+
+    .item-seleccionado__imagen {
+        margin: 0rem;
+        height: 30vw;        
+        width: 50%;
+    }
+    
+    .item-seleccionado__nombre {
+        font-weight: 500;
+        font-size: 52px;
+    }    
+
+    .item-seleccionado__precio {
+        margin: 2rem 0 0;
+    }
+    .item-seleccionado__descripcion {
+        font-size: 16px;
+    }
+
+    .item-seleccionado__info {
+        margin: 0 0 0 1rem;
+        width: 50%;
+    }
+
+    .productos-similares {
+        margin: 0;
+    }
+    
+
+    /* =============== bloque informacion =================== */
+
     .bloque__informacion {
         padding: 3rem 7%;
     }

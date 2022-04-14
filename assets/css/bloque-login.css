@@ -2,9 +2,14 @@
 .bloque__login {
     display: none;
     padding: 6rem 0rem 4rem;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .bloque__login--visible {
+    opacity: 1;
+}
+
+.bloque__login--enabled {
     display: block;
 }
 
