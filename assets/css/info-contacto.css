@@ -5,38 +5,31 @@
     margin: 8px 0;
 }
 
-.contacto__boton-enviar--disabled {
+.contacto__boton--disabled {
    background-color: var(--texto-gris);
-   border: none;
    box-shadow: 2px 2px 2px rgba(10,10,10, 0.5);
    color: var(--texto-blanco-boton);
-   font-weight: 500;
-   font-size: 14px;
-   line-height: 16px;
-   margin: 0;
-   padding: 14px 16px;
-   text-decoration: none;
 }
 
-.contacto__boton-enviar--disabled:hover {
+.contacto__boton--disabled:hover {
  cursor: pointer;
 }
 
-.contacto__boton-enviar--enabled:hover {
+.contacto__boton--enabled:hover {
  cursor: pointer;
 }
 
-.contacto__boton-enviar--enabled{
+.contacto__boton--enabled{
  background-color: var(--bg-boton-azul);
 }
 
-.contacto__boton-enviar--enabled:active {
+.contacto__boton--enabled:active {
 transform: translate(2px,2px);
 box-shadow: none;
 }
 
 
-.contacto__input-container {
+.input-container {
  font-weight: 400;
  position: relative;
  margin-bottom: 0rem;
@@ -61,7 +54,7 @@ box-shadow: none;
 
 .input::placeholder {
  visibility: hidden;
- color: var(--texto-gris);
+ color: var(--texto-gris-mas-claro);
 }
 
 .input:focus {
@@ -72,8 +65,10 @@ box-shadow: none;
  position: absolute;
  top: 1.375rem;
  left: 0.5rem;
- font-size: 14px;
  transition: all 0.25s;
+ color: var(--texto-gris-mas-claro);
+ font-weight: 400;
+ font-size: 12px;
 }
 
 .input:not(:placeholder-shown) + .input-label,
@@ -81,7 +76,7 @@ box-shadow: none;
  font-size: 0.875rem;
  top: 0.25rem;
  transition: all 0.25s;
- color: var(--texto-azul-boton);
+ color: var(--texto-gris-mas-claro);
 }
 
 /* ========= barra expandible =============== */
@@ -162,7 +157,7 @@ box-shadow: none;
 /* ========================= textarea ============================= */
 
 
-.contacto__textarea-container {
+.textarea-container {
  font-weight: 400;
  position: relative;
  margin-bottom: 0rem;
@@ -176,7 +171,7 @@ box-shadow: none;
 
 .textarea::placeholder {
  visibility: hidden;
- color: var(--texto-gris);
+ color: var(--texto-gris-mas-claro);
 }
 
 .textarea:focus {
@@ -187,7 +182,9 @@ box-shadow: none;
  position: absolute;  
  top: 1.375rem;
  left: 0.5rem;
- font-size: 400;
+ color: var(--texto-gris-mas-claro);
+ font-size: 12px;
+ font-weight: 400;
  transition: all 0.25s;
 }
 
@@ -196,14 +193,14 @@ box-shadow: none;
  font-size: 0.875rem;                 /* estaban en la misma linea separados por una coma */
  top: 0.25rem;
  transition: all 0.25s;
- color: var(--texto-azul-boton);
+ color: var(--texto-gris-mas-claro);
 }
 
 .textarea:not(:placeholder-shown) + .textarea-label {
  font-size: 0.875rem;
  top: 0.25rem;
  transition: all 0.25s;
- color: var(--texto-azul-boton);
+ color: var(--texto-gris-mas-claro);
 } 
 
 

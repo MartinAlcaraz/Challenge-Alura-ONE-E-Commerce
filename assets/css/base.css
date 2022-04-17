@@ -16,9 +16,13 @@
 
 }
 
-*{
+* { 
    box-sizing: border-box;
    color: var(--texto-gris);
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 body{
@@ -34,16 +38,14 @@ body{
 .boton {
    display: inline-block;
    text-decoration: none;
-   color: var(--texto-azul-boton);
-   background-color: var(--bg-gris);
-   border: 1px solid var(--texto-azul-boton);
-   font-weight: 500;
+   color: var(--texto-blanco);
+   font-weight: 400;
    font-size: 14px;
    line-height: 16px;
    margin: 0;
    /* box-shadow: 2px 2px 2px rgba(10,10,10, 0.5); */
-   padding: 10px 12px;
-   width: 7rem;
+   padding: 12px 16px;
+   
 }
 
 .boton:hover {

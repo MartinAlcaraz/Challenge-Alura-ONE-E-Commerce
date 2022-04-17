@@ -1,5 +1,5 @@
 .bloque__productos{
-    margin: 0 1rem;
+    margin: 0;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
  }
@@ -12,7 +12,8 @@
 }
 
 .productos {
-    padding: 0.5rem 0rem 2rem;
+    display: block;
+    padding: 0.5rem 3vw 2rem;
 }
 
 .productos__encabezado {
@@ -25,8 +26,7 @@
 .productos__titulo {
     color: var(--texto-gris);
     font-size: 22px;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
 
 .productos__ver-todo {
@@ -39,24 +39,28 @@
 .productos__ver-todo--flecha {
     height: 14px;
     vertical-align: middle;
-
 }
 
 
-.productos__grilla {
+.grilla {
     display: grid;
-    grid-template-columns: 48.5% 48.5%;
+    grid-template-columns: 45.5vw 45.5vw;
     grid-template-rows: auto;
-    grid-gap: 3%;
+    grid-gap: 3vw; 
 }
 
 .item{
+    display: block;
     width: 100%;
     height: auto;
+    /* overflow: auto; */
 }
 
-.item:nth-of-type(n+ 5){        /* n+ 5  ===>  selecciona a partir del 5to elemento de   */
-    display: none;              /*    clase item para no mostrar los items  */
+/* n+ 5  ===>  selecciona a partir del 5to elemento de   */
+/*    clase item para no mostrar los items  */
+
+.item:nth-of-type(n+ 5){        
+    display: none;              
 }
 
 .item__imagen {    

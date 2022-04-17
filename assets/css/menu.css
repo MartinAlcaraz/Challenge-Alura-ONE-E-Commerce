@@ -101,7 +101,9 @@
 }
 
 .menu__login-boton {
-   background-color: var(--bg-blanco);
+   color: var(--texto-azul);
+   background-color: transparent;
+   border: 1px solid var(--bg-boton-azul);
    display: inline-block;
    width: 100%;
 }
