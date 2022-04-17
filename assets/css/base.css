@@ -37,6 +37,7 @@ body{
 
 .boton {
    display: inline-block;
+   border: none;
    text-decoration: none;
    color: var(--texto-blanco);
    font-weight: 400;

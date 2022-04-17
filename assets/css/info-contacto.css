@@ -6,7 +6,7 @@
 }
 
 .contacto__boton--disabled {
-   background-color: var(--texto-gris);
+   background-color: var(--bg-boton-azul);
    box-shadow: 2px 2px 2px rgba(10,10,10, 0.5);
    color: var(--texto-blanco-boton);
 }
@@ -212,7 +212,7 @@ box-shadow: none;
 .textarea__bar {
  position:relative; 
  display:block;
- top: -4px;
+ top: -7px;
  width:100%; 
 }
 

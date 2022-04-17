@@ -17,10 +17,6 @@
     background-color: var(--bg-blanco);
 }
 
-/* .agregar-producto__input-container {
-    
-} */
-
 .agregar-producto__titulo {
     font-size: 22px;
     font-weight: 700;
@@ -38,13 +34,14 @@
 } 
 
 .box-image__icono {
+    display: block;
     position: absolute;
     top: 35%;
     left: calc(50% - 1rem);
     width: 2rem;
     height: 2rem;
     z-index: 1;
-    border: none;
+    
     background-image: url(../img/signo-mas.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -56,21 +53,34 @@
     font-weight: 400;
     font-size: 14px;
     top: 70%;
-    left: calc(50% - 110px);
+    left: calc(50% - 120px);
     z-index: 1;
+    text-align: center;
+}
+
+.box-image__texto--movil {
+    display: block;
+}
+
+.box-image__texto--tablet {
+    padding: 0 2rem;
+    display: none;
 }
 
 .img-container__or {
+    display: none;
     font-size: 16px;
     font-weight: 400;
-    padding: 0 1rem;
+    padding: 0 10px;
 }
 
+
 .img-container__boton {
+    display: none;
     color: var(--bg-boton-azul);
     background-color: transparent;
     border: 1px solid var(--bg-boton-azul);
-    padding: 14px 20px;
+    padding: 14px;
 }
 
 .box-image__input--image {
@@ -129,8 +139,8 @@
 
 
 .agregar-producto__boton {
-    background-color: var(--texto-gris);
-    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.5);
+    background-color: var(--bg-boton-azul);
+    /* box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.5); */
     color: var(--texto-blanco-boton);
 }
 
