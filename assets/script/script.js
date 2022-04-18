@@ -3,22 +3,33 @@ const boton_home = document.querySelector(".home");
 const boton_ver_consolas = document.querySelector("boton-ver-consolas");
 const boton_entrar = document.querySelector("#boton-entrar");
 const boton_subir_img = document.querySelector("#boton-subir-img");
+const boton_agregar_producto = document.querySelector("#boton-agregar-producto");
 
 const bloque_login = document.querySelector("#bloque-login");
 const bloque_banner = document.querySelector("#bloque-banner");
 const bloque_productos = document.querySelector("#bloque-productos");
 const bloque_productos_similares = document.querySelector("#bloque-productos-similares");
 const bloque_todos_los_productos = document.querySelector("#bloque-todos-los-productos");
+const bloque_agregar_producto = document.querySelector("#bloque-agregar-producto");
+
+
 const items = document.querySelectorAll(".item");
 
 const inputImagen = document.querySelector("[data-input-imagen]");
 
-const dropZone = document.querySelector("#drop-zone");
+// boton_agregar_producto
+boton_agregar_producto.addEventListener("click", () => {
+    bloque_todos_los_productos.classList.remove("bloque__todos-los-productos--visible");
 
+    setTimeout(() => {
+        bloque_todos_los_productos.classList.remove("bloque__todos-los-productos--enabled");
+        bloque_agregar_producto.classList.add("bloque__agregar-producto--enabled");
+    }, 400);
 
-bloque_banner.classList.add("banner--disabled");
-bloque_productos.classList.add("bloque__productos--disabled");
-
+    setTimeout(() => {
+        bloque_agregar_producto.classList.add("bloque__agregar-producto--visible");
+    }, 500);
+});
 
 boton_entrar.addEventListener("click", (event) => {
     event.preventDefault();
@@ -58,16 +69,18 @@ items.forEach(item => {
     });
 });
 
-
+// boton_login
 boton_login.addEventListener("click", () => {
 
     bloque_banner.classList.add("banner--invisible");
     bloque_productos.classList.add("bloque__productos--invisible");
     bloque_productos_similares.classList.add("bloque__productos-similares--invisible");
+    bloque_agregar_producto.classList.remove("bloque__agregar-producto--visible");
     setTimeout(() => {
         bloque_banner.classList.add("banner--disabled");
         bloque_productos.classList.add("bloque__productos--disabled");
         bloque_productos_similares.classList.add("bloque__productos-similares--disabled");
+        bloque_agregar_producto.classList.remove("bloque__agregar-producto--enabled");
         bloque_login.classList.add("bloque__login--enabled");
     }, 400);
 
@@ -78,11 +91,10 @@ boton_login.addEventListener("click", () => {
 });
 
 
-/////////////////// mostrar imagen en pantalla
-
+/////////////////// mostrar imagen en box-image
 inputImagen.addEventListener("change", (event) => cargarImagen(event));
 
-function cargarImagen (evento) {
+function cargarImagen(evento) {
     let file = evento.target.files[0];
     let reader = new FileReader();
     reader.onload = function (event) {
@@ -92,7 +104,7 @@ function cargarImagen (evento) {
 
         let fondo = document.querySelector("#fondo");
         fondo.classList.add("box-image__imagen-fondo--invisible");
-        
+
     }
     reader.readAsDataURL(file);
 };
@@ -100,19 +112,19 @@ function cargarImagen (evento) {
 
 boton_subir_img.addEventListener("click", (event) => {
     event.preventDefault();
-    inputImagen.click();    
+    inputImagen.click();
 });
 
 /////////////////////// drag and drop
 
-function drag_handler(ev) {
-    console.log("Drag");
-}
+// function drag_handler(ev) {
+//     console.log("Drag");
+// }
 
-function dragstart_handler(ev) {
-    console.log("dragStart");
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+// function dragstart_handler(ev) {
+//     console.log("dragStart");
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
 
 
 // dropZone.addEventListener("drop", (event) => {

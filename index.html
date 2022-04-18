@@ -51,10 +51,12 @@
             <div class="menu__login">
                 <button class="menu__login-boton  boton" id="boton-login">Login</button>
             </div>
-            <div class="menu__caja-busqueda">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?">
+
+            <form class="menu__caja-busqueda" action="">
+                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on">
                 <button class="menu__lupa"></button>
-            </div>
+            </form>
+
 
         </nav>
         <!----------------------  banner  -------------------------->
@@ -349,7 +351,7 @@
 
                 <div class="productos__encabezado todos-los-productos__encabezado">
                     <h2 class="productos__titulo">Todos los productos</h2>
-                    <button class="boton todos-los-productos__boton">Agregar producto</button>
+                    <button class="boton todos-los-productos__boton" id="boton-agregar-producto">Agregar producto</button>
                 </div>
 
                 <div class="grilla grilla--todos-los-productos">
@@ -524,11 +526,13 @@
                     <!--  ========  input imagen producto  =========  -->
                     <div class="agregar-producto__img-container">
                         <div class="img-container__box-image  input-container">
-                            
+
                             <div class="box-image__imagen-fondo" id="fondo">
                                 <div class="box-image__icono"></div>
-                                <p class="box-image__texto box-image__texto--movil">Agregar una imagen para el producto</p>  
-                                <p class="box-image__texto box-image__texto--tablet">Arrastre para agregar una imagen para el producto</p>                                
+                                <p class="box-image__texto box-image__texto--movil">Agregar una imagen para el producto
+                                </p>
+                                <p class="box-image__texto box-image__texto--tablet">Arrastre para agregar una imagen
+                                    para el producto</p>
                             </div>
 
                             <input class="box-image__input--image" type="file" data-input-imagen name="img"
@@ -537,7 +541,8 @@
 
                         </div>
                         <p class="img-container__or">O</p>
-                        <button class="img-container__boton boton" id="boton-subir-img">Busque en su dispositivo</button>
+                        <button class="img-container__boton boton" id="boton-subir-img">Busque en su
+                            dispositivo</button>
                     </div>
 
                     <!--  ========  input nombre producto  =========  -->
@@ -569,7 +574,7 @@
                     </div>
 
                     <!--  ========  input Submit  =========  -->
-                    <input class="boton agregar-producto__boton" id="agregar-producto-boton" type="submit"
+                    <input class="boton agregar-producto__boton" id="agregar-producto-boton-form" type="submit"
                         value="Agregar producto">
 
                 </form>
