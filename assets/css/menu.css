@@ -106,6 +106,7 @@
    border: 1px solid var(--bg-boton-azul);
    display: inline-block;
    width: 100%;
+   text-align: center;
 }
 
 .menu__login-boton--invisible {

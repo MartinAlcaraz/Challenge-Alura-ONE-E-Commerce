@@ -57,6 +57,10 @@
         padding: 1rem 4vw 2rem;
     }
 
+   .textarea__bar {
+    top: -6px;
+   }
+
     .todos-los-productos__boton {
         margin-top: 20px;
         padding: 14px 16px;
@@ -220,12 +224,12 @@
 
     .info__quienes-somos {
         align-items: flex-start;
-        flex-grow: 1;
+        width: 40%;
         padding: 0;
     }
 
     .info__contacto {
-        flex-grow: 2;
+        width: 60%;
     }
 
     .info__logo {
@@ -400,16 +404,13 @@
     }
 
     .info__contacto {
-        flex-grow: 1;
-        min-width: 50%;
+        width: 50%;
     }
 
     .info__quienes-somos {
-        flex-grow: 1;
-
         display: flex;
         flex-direction: row;
-
+        width: 50%;
     }
 
     .info__logo {
@@ -452,4 +453,5 @@
     .agregar-producto__img-container {
         justify-content: space-between;
     }
+
 }

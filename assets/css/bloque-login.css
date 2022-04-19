@@ -1,17 +1,9 @@
 
 .bloque__login {
-    display: none;
-    opacity: 0;
+    display: block;
+    opacity: 1;
     padding: 6rem 0rem 4rem;
     transition: opacity 0.4s ease-in-out;
-}
-
-.bloque__login--visible {
-    opacity: 1;
-}
-
-.bloque__login--enabled {
-    display: block;
 }
 
 .login__titulo {
@@ -19,6 +11,7 @@
     font-weight: 700;
     line-height: 18px;
     text-align: center;
+    margin: 1rem 0 1rem;
 }
 
 /* .login__formulario {} */
@@ -26,9 +19,9 @@
 .login__input {
     display: flex;
     align-items: center;
-    flex: none;
-    color: var(--texto-gris);
-    margin: 1rem auto;
+    /* flex: none; */
+    color: var(--texto-gris-mas-claro);
+    margin: 0rem auto;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -47,7 +40,9 @@
     color: var(--texto-blanco);
     background-color: var(--bg-boton-azul);
     border-radius: 0;
-    padding: 10px 118px;
+    padding: 10px 40px;
+    /* padding: 10px 118px; */
     font-size: 14px;
     font-weight: 500;
+    width: auto;
 }
