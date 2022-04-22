@@ -129,26 +129,6 @@
     display: block;
 }
 
-/* .box-image__input--image::file-selector-button {
-    border: 2px solid orange;   
-    outline: yellowgreen;
-} */
-/* 
-.box-image__input--image::placeholder {
-    color: var(--texto-gris-mas-claro);
-} */
-
-
-.drop-zone {
-    width: 100%;
-    height: 200px;
-    border: 1px dashed var(--texto-gris-mas-claro);
-}
-
-/* .drop-zone__img {}
-
-.drop-zone__texto {} */
-
 .agregar-producto__boton {
     background-color: var(--bg-boton-azul);
     /* box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.5); */
