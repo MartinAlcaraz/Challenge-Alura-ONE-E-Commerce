@@ -55,7 +55,7 @@ boton_entrar_login.addEventListener("click", (event) => {
     // Abrir pagina si el password es correcto
 
     if ( passwordCorrecto){             // ó la linea de abajo
-        location.href="../todos-los-productos.html";  
+        //location.href="../todos-los-productos.html";  
         //window.open("../todos-los-productos.html", "_self");
         //window.open("https://github.com/MartinAlcaraz/Challenge-Alura-ONE-E-Commerce/settings/pages", "_self");
     }
