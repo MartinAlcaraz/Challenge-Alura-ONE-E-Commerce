@@ -53,8 +53,10 @@ boton_entrar_login.addEventListener("click", (event) => {
 
     let passwordCorrecto = true;
     // Abrir pagina si el password es correcto
+
     if ( passwordCorrecto){
-        window.open("../todos-los-productos.html", "_self");
+        location.href="../todos-los-productos.html";
+        //window.open("../todos-los-productos.html", "_self");
     }
     
 

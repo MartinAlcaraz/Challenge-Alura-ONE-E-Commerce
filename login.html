@@ -55,7 +55,7 @@
 
             <form class="menu__caja-busqueda" action="">
                 <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on">
-                <button class="menu__lupa"></button>
+                <button class="menu__lupa" onclick="event.preventDefault();"></button>
             </form>
 
 
@@ -70,7 +70,7 @@
 
         <div class="bloque__login" id="bloque-login">
             <h3 class="login__titulo">Iniciar sesión</h3>
-            <form class="login__formulario" action="#" method="post">
+            <form class="login__formulario" action="" method="post">
 
                 <div class="input-container">
                     <input class="login__input login__input--email input-login" name="email" type="email"
