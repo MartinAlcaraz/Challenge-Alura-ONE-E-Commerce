@@ -51,18 +51,16 @@ boton_entrar_login.addEventListener("click", (event) => {
         validar(input);
     });
 
-    // let passwordCorrecto = true;
-    // Abrir pagina si el password es correcto
+    let passwordCorrecto = true;
 
-    //location.href="../todos-los-productos.html";  
-
-    window.location.replace("../todos-los-productos.html");
-
-    // if ( passwordCorrecto){             // ó la linea de abajo
+    // Abrir pagina si el password es correcto    
+    if ( passwordCorrecto){             
         
-    //     //window.open("../todos-los-productos.html", "_self");
-    //     //window.open("https://github.com/MartinAlcaraz/Challenge-Alura-ONE-E-Commerce/settings/pages", "_self");
-    // }
+        window.open("./todos-los-productos.html", "_self");
+        // window.location.replace("./todos-los-productos.html");    alternativas para abrir una pagina
+        // location.href="./todos-los-productos.html";  
+
+    }
     
 
 });
