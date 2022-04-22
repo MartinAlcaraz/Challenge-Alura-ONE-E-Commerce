@@ -40,9 +40,6 @@
 .menu__caja-busqueda {
    background-color: transparent;
    border-radius: 20px;
-   display: flex;
-   align-items: center;   
-   justify-content: space-between;
    height: auto;
    padding: 0px;
    width: 10%;
@@ -50,22 +47,43 @@
 }
 
 .menu__input-buscador {
-   display: none;
    border: none;
+   outline: none;
    background-color: transparent;
    display: inline-block;
    font-size: 14px;
-   /* line-height: 16px; */
-   width: 0%;
+   line-height: 16px;
+   width: 100%;
+   background-color: transparent;
+   background-image: url(../img/lupa.svg);
+   background-repeat: no-repeat;
+   background-position: right;
+   color: transparent;
 }
+
 .menu__input-buscador::placeholder {
+   color: transparent;
+}
+
+.menu__input-buscador:focus::placeholder {
    color: var(--texto-gris-mas-claro);
 }
 
 .menu__input-buscador:focus {
-   outline: none;
+   color: var(--texto-gris-mas-claro);
 }
 
+.menu__caja-busqueda:hover {
+   background-color: var(--bg-gris);
+   padding: 5px 16px;
+   width: 100%;
+}
+
+.menu__caja-busqueda:hover .menu__input-buscador {
+   width: 100%;
+}
+
+/* 
 .menu__lupa {   
    border: none;
    background-color: transparent;
@@ -78,17 +96,8 @@
    cursor: pointer;
    margin-top: 5px;
 }
+ */
 
-
-.menu__caja-busqueda:hover {
-   background-color: var(--bg-gris);
-   padding: 5px 16px;
-   width: 100%;
-}
-
-.menu__caja-busqueda:hover .menu__input-buscador {
-   width: 100%;
-}
 
 
 /* ========  boton login  ============ */
