@@ -54,10 +54,10 @@ boton_entrar_login.addEventListener("click", (event) => {
     let passwordCorrecto = true;
     // Abrir pagina si el password es correcto
 
-    if ( passwordCorrecto){
-        //location.href="../todos-los-productos.html";  ó la linea de abajo
+    if ( passwordCorrecto){             // ó la linea de abajo
+        location.href="../todos-los-productos.html";  
         //window.open("../todos-los-productos.html", "_self");
-        window.open("https://github.com/MartinAlcaraz/Challenge-Alura-ONE-E-Commerce/settings/pages", "_self");
+        //window.open("https://github.com/MartinAlcaraz/Challenge-Alura-ONE-E-Commerce/settings/pages", "_self");
     }
     
 
