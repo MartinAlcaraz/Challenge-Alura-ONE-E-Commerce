@@ -1,5 +1,5 @@
 import { validar, habilitarBotonSubmit } from "./validaciones.js";
-import { addEventToInputsContacto } from "./script.js";
+
 
 const inputs_contacto = document.querySelectorAll(".input-contacto");
 const boton_enviar_contacto = document.querySelector("[data-submit-contacto]");
@@ -12,7 +12,7 @@ const boton_submit_producto = document.querySelector("[data-input-submit]");
 
 //const input_precio = document.querySelector("[data-input-precio]");
 
-// da formato tipo moneda al input precio ej $2.754,50
+
 const darFormatoMoneda = (input) => {
     let numValue = input.value;
     let num = numValue.replace(/[\$\.\,]/g, "");      // elimina los signos $ . , 
@@ -111,6 +111,19 @@ boton_subir_img.addEventListener("click", (event) => {
 
 
 // validacion de formulario de contacto
+inputs_contacto.forEach((input) => {
 
-addEventToInputsContacto(inputs_contacto, boton_enviar_contacto);
+    input.addEventListener("blur", (input) => {
+        validar(input.target)
+    });
+
+    input.addEventListener("keyup", (input) => {    // comprueba despues de ingresar un caracter del teclado
+
+        // if ( tipoDeInput == "nombre"){        // comprueba solo el campo data-tipo="nombre" en cada ingreso de teclado
+        //       validar(input.target);
+        // }   
+        validar(input.target);
+        habilitarBotonSubmit(inputs_contacto, boton_enviar_contacto);
+    });
+});
 
