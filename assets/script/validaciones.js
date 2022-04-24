@@ -3,7 +3,7 @@
 export const validar = (input) => {
 
     const tipoDeInput = (input.dataset.tipo);
-    
+
     // para que input.validity.valid sea true (input.validity.valid=true) hay que setear setCustomValidity("")
     // con string vacío ""      
 
@@ -64,26 +64,29 @@ const validadores = {
 
 const validarImagen = (input) => {
     let mensaje = "";
-    let imagen= input.value;
-    
+    let imagen = input.value;
+
     // veirficar que sea un archivo .jpg o .jpeg
     //ej perrito.jpg
 
     let texto = imagen;
-    
-    let extensiones = [".jpg", ".jpeg", ".png"];
 
-    let esArchivoDeImagen= false;
+    if (texto == "") {
+        mensaje = "Seleccione una imagen para el producto."
+    } else {
 
-    extensiones.forEach((extension) => {
-      if (texto.endsWith(extension)) {
-            esArchivoDeImagen= true;
-      }  
-    } );
+        let extensiones = [".jpg", ".jpeg", ".png"];
+        let esArchivoDeImagen = false;
 
-    console.log("esArchivoDeImagen ? : " , esArchivoDeImagen);
-    if (!esArchivoDeImagen) {
-        mensaje = "Este no es un archivo de imagen."
+        extensiones.forEach((extension) => {
+            if (texto.endsWith(extension)) {
+                esArchivoDeImagen = true;
+            }
+        });
+        //console.log("esArchivoDeImagen ? : ", esArchivoDeImagen);
+        if (!esArchivoDeImagen) {
+            mensaje = "Este no es un archivo de imagen."
+        }
     }
 
     input.setCustomValidity(mensaje);
@@ -112,18 +115,18 @@ const validarPrecio = (input) => {
     //console.log("validarPrecio: ", numero);
     let regEx = /^\$(\d{1,3}(\.\d{3})+|(\d+))(\,\d{2})?$/;
 
-    if (regEx.test(st) == false){
+    if (regEx.test(st) == false) {
         mensaje = "El formato de precio es incorrecto";
     }
 
     let n = st.replace(/[\$\.]/g, "");      // elimina los signos $ y .   
-    
+
     n = n.replace(/[\,]+/g, ".");      // cambia la coma por el punto para convertir el numero en numero flotante        
-    n= parseFloat(n);
-    
+    n = parseFloat(n);
+
     if (n == 0) {
         mensaje = "El precio tiene que ser mayor que cero $0.00."
-    } 
+    }
     input.setCustomValidity(mensaje);
 }
 
@@ -262,7 +265,7 @@ const mensajeDeErrores = {
 function mostrarMensajeDeError(input, tipoDeInput) {
     let mensajes = "";
     tipoDeErrores.forEach((error) => {
-        
+
         if (input.validity[error]) {
 
             //console.log(mensajeDeErrores[tipoDeInput][error]);
