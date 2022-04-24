@@ -78,7 +78,7 @@
 
         <!-- =============== bloque productos ================= -->
         <div class="bloque__productos" id="bloque-productos">
-            <section class="productos productos--starwars">
+            <section class="productos productos--starwars" >
 
                 <div class="productos__encabezado">
                     <h2 class="productos__titulo">Starwars</h2>
@@ -86,8 +86,7 @@
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
-
-                <div class="grilla">
+                <div class="grilla" data-tipo-starwars>
                     <div class="item">
                         <a href="productos-similares.html"><img class="item__imagen" src="./assets/img/productos/starwars-01.png"
                                 alt="imagen producto"></a>
@@ -145,7 +144,7 @@
 
                 <div class="productos__grilla-container">
 
-                    <div class="grilla">
+                    <div class="grilla" data-tipo-consolas>
                         <div class="item">
                             <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-01.png"
                                     alt="imagen producto"></a>
@@ -208,7 +207,7 @@
                 </div>
 
                 <div class="productos__grilla-container">
-                    <div class="grilla">
+                    <div class="grilla" data-tipo-diversos>
 
                         <div class="item">
                             <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-01.png"
@@ -326,6 +325,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="./controllers/lista.productos.controller.js" type="module"></script>
     <script src="./assets/script/script.js" type="module"></script>
 </body>
 
