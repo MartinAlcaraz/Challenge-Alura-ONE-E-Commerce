@@ -54,8 +54,9 @@
             </div>
 
             <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on" required>
-                
+                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on"
+                    required>
+
             </form>
 
 
@@ -70,30 +71,32 @@
         <!-- =============== bloque producto - productos similares ================= -->
 
         <div class="bloque__productos-similares" id="bloque-productos-similares">
-
-            <div class="item-seleccionado">
-                <div class="item-seleccionado__imagen"></div>
-                <div class="item-seleccionado__info">
-                    <p class="item-seleccionado__nombre">Producto XYZ</p>
-                    <p class="item-seleccionado__precio">$ 60.00</p>
-                    <p class="item-seleccionado__descripcion"> Voluptas voluptatum quibusdam similique, class debitis
-                        alias
-                        maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse
-                        distinctio
-                        sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae?
-                        Commodo,
-                        quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta
-                        anim magnam.
-                    </p>
+            <div data-tipo-producto-descripcion>
+                <div class="item-seleccionado">
+                    <img class="item-seleccionado__imagen" src="./assets/img/productos/starwars-02.svg">
+                    <div class="item-seleccionado__info">
+                        <p class="item-seleccionado__nombre">Producto XYZ</p>
+                        <p class="item-seleccionado__precio">$ 70.00</p>
+                        <p class="item-seleccionado__descripcion"> Voluptas voluptatum quibusdam similique, class
+                            debitis
+                            alias
+                            maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse
+                            distinctio
+                            sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae?
+                            Commodo,
+                            quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi
+                            porta
+                            anim magnam.
+                        </p>
+                    </div>
                 </div>
             </div>
-
             <section class="productos productos--similares">
                 <div class="productos__encabezado">
                     <h2 class="productos__titulo">Productos similares</h2>
                 </div>
 
-                <div class="grilla">
+                <div class="grilla" data-tipo-grilla-similares>
                     <div class="item">
                         <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-03.png"
                                 alt="imagen producto"></a>
@@ -209,7 +212,8 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
-    <script src="./assets/script/productos-similares.js" type="module"></script>
+    <script type="module" src="./controllers/detalle.productos.controller.js"></script>
+    <script type="module" src="./assets/script/productos-similares.js"></script>
 </body>
 
 </html>
