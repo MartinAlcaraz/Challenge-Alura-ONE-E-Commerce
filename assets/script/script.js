@@ -1,6 +1,5 @@
 import { validar, habilitarBotonSubmit } from "./validaciones.js";
 
-
 const inputs_contacto = document.querySelectorAll(".input-contacto");
 const boton_enviar_contacto = document.querySelector("[data-submit-contacto]");
 

@@ -41,7 +41,7 @@
    border-radius: 20px;
    height: auto;
    padding: 10px;
-   
+   position: relative;
    width: 25px;
    transition: width 0.5s ease-in-out;
    background-image: url(../img/lupa.svg);
@@ -73,6 +73,32 @@
 
 .menu__caja-busqueda:hover .menu__input-buscador::placeholder {
    color: var(--texto-gris-mas-claro);
+}
+
+.caja-busqueda__lista-autocompletar {
+   
+   position: absolute;
+   list-style: none;
+   border-radius: 5px;
+   margin: 0;
+   padding: 10px;
+   max-height: 200px;
+   max-width: 300px;
+   z-index: 1;
+   background-color: var(--bg-blanco);
+   opacity: 0.9;
+}
+
+.caja-busqueda__lista-autocompletar:empty {
+   display: none;
+}
+
+.caja-busqueda__list-item {
+   display: block;
+   color: var(--texto-gris);
+}
+.caja-busqueda__list-item:nth-of-type(n+ 5){        
+   display: none;              
 }
 
 
