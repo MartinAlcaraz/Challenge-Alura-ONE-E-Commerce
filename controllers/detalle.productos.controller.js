@@ -11,7 +11,7 @@ const nuevoItemConDescripcion = (id, nombre, precio, descripcion, img) => {
     <div class="item-seleccionado">
         <img class="item-seleccionado__imagen" src=${img}>
         <div class="item-seleccionado__info">
-            <p class="item-seleccionado__nombre">Producto ${nombre}</p>
+            <p class="item-seleccionado__nombre">${nombre}</p>
             <p class="item-seleccionado__precio">$ ${precio}</p>
             <p class="item-seleccionado__descripcion">${descripcion}</p>
         </div>    
@@ -26,7 +26,7 @@ const nuevoItem = (id, nombre, precio, img) => {
     item.classList.add("item");
     let content = `
         <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen producto"></a>
-        <p class="item__nombre">Producto ${nombre}</p>
+        <p class="item__nombre">${nombre}</p>
         <p class="item__precio">$ ${precio}</p>
         <a class="item__enlace" href="./productos-similares.html?id=${id}">Ver producto</a>`
         ;
@@ -35,9 +35,7 @@ const nuevoItem = (id, nombre, precio, img) => {
     return item;
 }
 
-
-const cargarProductosSimilares = async () => {
-
+const obtenerId = () => {
     //  funcion que obtiene el id del objeto desde la url de la pagina
     const url = new URL(window.location);
     const id = url.searchParams.get("id");
@@ -45,6 +43,10 @@ const cargarProductosSimilares = async () => {
     if (id === null) {
       window.location.href = "./index.html";
     }
+    return id;
+}
+
+const cargarProductosSimilares = async (id) => {
 
     try {
         let prod = await servicios.obtenerProducto(id);
@@ -69,4 +71,4 @@ const cargarProductosSimilares = async () => {
 
 producto_descripcion.innerHTML = "";
 grilla_similares.innerHTML = "";
-cargarProductosSimilares();
+cargarProductosSimilares( obtenerId() );

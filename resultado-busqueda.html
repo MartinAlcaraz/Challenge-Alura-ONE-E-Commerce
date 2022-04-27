@@ -25,6 +25,8 @@
     <link href="./assets/css/bloque-productos-similares.css" rel="stylesheet" />
     <link href="./assets/css/bloque-todos-los-productos.css" rel="stylesheet" />
     <link href="./assets/css/bloque-agregar-producto.css" rel="stylesheet" />
+    <link href="./assets/css/resultado-busqueda.css" rel="stylesheet" />
+    
 
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
@@ -50,91 +52,32 @@
             </a>
 
             <div class="menu__login">
-                <a class="menu__login-boton  boton" id="boton-login" href="./login.html">Login</a>
+                <a class="menu__login-boton  boton" id="boton-login" href="login.html">Login</a>
             </div>
 
             <form class="menu__caja-busqueda" action="">
                 <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="on" required>
                 
             </form>
-
-
         </nav>
     </header>
 
     <!----------------------  main  -------------------------->
     <main class="main">
 
-        <!-- =============== bloque Agregar productos ================= -->
-        <div class="bloque__agregar-producto" id="bloque-agregar-producto">
-            <section class="agregar-producto">
-                <h3 class="agregar-producto__titulo">Agregar nuevo producto</h3>
+        <!-- =============== bloque TODOS los productos ================= -->
+        <div class="bloque__todos-los-productos" id="bloque-todos-los-productos">
+            <section class="productos productos--todos-los-productos">
 
+                <div class="productos__encabezado todos-los-productos__encabezado">
+                    <h2 class="productos__titulo">Resultados de: <span class="palabra-busqueda" id="busqueda"></span> </h2>
+                </div>
 
-                <form class="agregar-producto__formulario" action="">
+                <div class="grilla grilla--todos-los-productos" data-tipo-grillaResultadoBusqueda>
 
-                    <!--  ========  input imagen producto  =========  -->
-                    <div class="agregar-producto__img-container">
-                        <div class="img-container__box-image  input-container">
-
-                            <div class="box-image__imagen-fondo" id="fondo">
-                                <div class="box-image__icono"></div>
-                                <p class="box-image__texto box-image__texto--movil">Agregar una imagen para el producto.
-                                </p>
-                                <p class="box-image__texto box-image__texto--tablet">Arrastre para agregar una imagen
-                                    para el producto.</p>
-                            </div>
-
-                            <input class="box-image__input--image agregar-producto__input" type="file" data-input-imagen
-                                data-tipo="imagen" name="img" accept="image/*" required>
-                            <img class="box-image__imagen-cargada" id="imagen-cargada">
-                            <span class="message-error">Este campo no es valido</span>
-                        </div>
-
-                        <p class="img-container__or">O</p>
-                        <button class="img-container__boton boton" id="boton-subir-img">Busque en su
-                            dispositivo</button>
-                    </div>
-
-                    <!--  ========  input nombre producto  =========  -->
-                    <div class="input-container agregar-producto__input-container">
-                        <input class="input agregar-producto__input" name="nombre" type="text" data-input-nombre
-                            data-tipo="nombre" autocomplete="off" placeholder="Producto XYZ" required>
-                        <label class="input-label" for="nombre">Nombre del producto</label>
-                        <span class="input__bar"></span>
-                        <span class="message-error">Este campo no es valido</span>
-                    </div>
-
-                    <!--  ========  input precio producto  =========  -->
-                    <div class="input-container agregar-producto__input-container">
-                        <input class="input agregar-producto__input" name="precio" type="text" maxlength="14"
-                            data-input-precio data-tipo="precio" autocomplete="off" placeholder="$60.00"
-                            onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
-
-
-                        <label class="input-label" for="precio">Precio del producto</label>
-                        <span class="input__bar"></span>
-                        <span class="message-error">Este campo no es valido</span>
-                    </div>
-
-                    <!--  ========  input descripcion del producto  =========  -->
-                    <div class="textarea-container agregar-producto__input-container">
-                        <textarea class="textarea input agregar-producto__input" name="descripcion"
-                            data-input-descripcion data-tipo="descripcion" type="text" rows="4" autocomplete="off"
-                            placeholder="Descripcion del producto" minlength="10" maxlength="100" required></textarea>
-                        <label class="textarea-label" for="descripcion">Descripcion del producto</label>
-                        <span class="textarea__bar"></span>
-                        <span class="message-error">Este campo no es valido</span>
-                    </div>
-
-                    <!--  ========  input Submit  =========  -->
-                    <input class="boton agregar-producto__boton" id="agregar-producto-boton-form" type="submit"
-                        value="Agregar producto" data-input-submit>
-
-                </form>
+                </div>
             </section>
         </div>
-
 
 
         <!-- ===================  seccion informacion  =============================== -->
@@ -199,7 +142,8 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
-    <script src="./assets/script/agregar-producto.js" type="module"></script>
+    <script src="./controllers/busqueda.productos.controller.js" type="module"></script>
+    <script src="./assets/script/todos-los-productos.js" type="module"></script>
 </body>
 
 </html>

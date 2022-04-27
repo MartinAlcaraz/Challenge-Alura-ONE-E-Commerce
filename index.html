@@ -54,7 +54,7 @@
             </div>
 
             <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on" required>
+                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="on" required>
                 
             </form>
 
@@ -78,11 +78,12 @@
 
         <!-- =============== bloque productos ================= -->
         <div class="bloque__productos" id="bloque-productos">
+
             <section class="productos productos--starwars" >
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Starwars</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=starwars">Starwars</a></h2>
+                    <a href="./todos-los-productos.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
@@ -137,8 +138,8 @@
             <section class="productos productos--consolas" id="seccion-consolas">
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Consolas</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=consolas">Consolas</a></h2>
+                    <a href="./todos-los-productos.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
@@ -201,8 +202,8 @@
             <section class="productos productos--diversos">
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Diversos</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=diversos">Diversos</a></h2>
+                    <a href="./todos-los-productos.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 

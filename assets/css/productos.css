@@ -29,6 +29,11 @@
     font-weight: 700;   
 }
 
+.productos__titulo--link {
+    text-decoration: none;
+}
+
+
 .productos__ver-todo {
     color: var(--texto-azul);
     font-size: 14px;
