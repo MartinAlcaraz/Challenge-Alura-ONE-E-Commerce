@@ -17,12 +17,13 @@ export const nuevoItem = (id, nombre, precio, img) => {
 export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton_form) => {
 
     let listaProductos = [];
-    
+
     //  se solicita la lista de productos
     input_buscador.addEventListener("focus", async () => {
+
         try {
             let lista = await servicios.listaProductos();
-            
+
             lista.forEach((data) => {
                 let nombre = data.nombre;
                 listaProductos.push(nombre);
@@ -31,23 +32,31 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
         } catch (error) {
             console.log("Error al cargar la lista para el input de busqueda");
         }
+
     });
+
 
     boton_form.addEventListener("click", (event) => {
         event.preventDefault();
+
         let texto = input_buscador.value;
-        console.log(`./resultado-busqueda.html?search=${texto}`);
+        texto = texto.trim();
+
         if (texto != "") {
             window.location.href = `./resultado-busqueda.html?search=${texto}`;
         }
     });
 
+
     lista_desplegable.addEventListener("click", (event) => {
         let texto = event.target.innerHTML;
         input_buscador.value = texto;
 
-        lista_desplegable.innerHTML = "";
         input_buscador.focus();
+
+        lista_desplegable.innerHTML = "";
+
+
     });
 
 
@@ -61,9 +70,9 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
                 lista_desplegable.removeChild();
             }
         } else {
-            
-            listaProductos.forEach((nombre) => {  
-                let nom = nombre.toLowerCase(); 
+
+            listaProductos.forEach((nombre) => {
+                let nom = nombre.toLowerCase();
                 if (nom.startsWith(input)) {
                     let li = document.createElement("li");
                     li.classList.add("caja-busqueda__list-item");
@@ -88,6 +97,7 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
         if (e.keyCode == 13) {
             // Tecla Enter, evitar que se procese el formulario
             e.preventDefault();
+
             // ¿Hay un elemento activo?
             if (items[actual]) {
                 // Hacer clic
@@ -114,9 +124,10 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
         }
     }
 
-    // ejecuta cuando se ingresa una letra
+    // ejecuta cuando se ingresa una letra excluyendo Enter
     input_buscador.addEventListener("keyup", (event) => {
         if (!(event.keyCode >= 37 && event.keyCode <= 40) && event.keyCode != 13) {
+
             generarListaDesplegable(event);
         }
     });
@@ -124,9 +135,24 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
     //  verifica si se pulsan las flechas o enter 
     input_buscador.addEventListener("keydown", (event) => {
 
+        let items = lista_desplegable.querySelectorAll("li");
+
+        if (items.length == 0) {
+            return; // La lista  de resultados esta vacía
+        }
+        // Saber si algun item está activo
+        let actual = Array.from(items).findIndex(item => item.classList.contains('active'));
+
+        // si se pulsa Enter y no hay seleccionado ningun item de la lista
+        if (event.keyCode == 13 && !items[actual]) {
+            boton_form.click();
+        }
+        // si se pulsa una flecha
         if ((event.keyCode >= 37 && event.keyCode <= 40) || event.keyCode == 13) {
             desplazarseEnListaDesplegable(event);
         }
+
     });
+
 
 }

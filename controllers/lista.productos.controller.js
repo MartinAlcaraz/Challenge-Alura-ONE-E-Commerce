@@ -5,6 +5,7 @@ const grilla_starwars = document.querySelector("[data-tipo-grilla-starwars]");
 const grilla_consolas = document.querySelector("[data-tipo-grilla-consolas]");
 const grilla_diversos = document.querySelector("[data-tipo-grilla-diversos]");
 
+
 const boton_form = document.querySelector("#input-boton");
 const input_buscador = document.querySelector("[data-tipo-buscador]");
 const lista_desplegable = document.querySelector("[data-lista]");
