@@ -54,8 +54,9 @@
             </div>
 
             <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="on" required>
-                
+                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="off" required>
+                <button class="menu_boton" id="input-boton"></button>
+                <ul class="caja-busqueda__lista" data-lista></ul>
             </form>
 
 
@@ -199,6 +200,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="./controllers/agregar-producto.controller.js" type="module"></script>
     <script src="./assets/script/agregar-producto.js" type="module"></script>
 </body>
 

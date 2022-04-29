@@ -1,7 +1,7 @@
 {
   "productos": [
     {
-      "nombre": "Producto A",
+      "nombre": "Joystick",
       "precio": "150",
       "id": "1",
       "categoria": "consolas",
@@ -25,7 +25,7 @@
       "img": "./assets/img/productos/consolas-03.svg"
     },
     {
-      "nombre": "Producto D",
+      "nombre": "Joystick",
       "precio": "250",
       "id": "4",
       "categoria": "consolas",
@@ -49,7 +49,7 @@
       "img": "./assets/img/productos/consolas-06.svg"
     },
     {
-      "nombre": "Producto G",
+      "nombre": "Darth Vader",
       "precio": "140",
       "id": "7",
       "categoria": "starwars",
@@ -57,7 +57,7 @@
       "img": "./assets/img/productos/starwars-01.svg"
       },
     {
-      "nombre": "Producto H",
+      "nombre": "Cylon",
       "precio": "670",
       "id": "8",
       "categoria": "starwars",
@@ -65,7 +65,7 @@
       "img": "./assets/img/productos/starwars-02.svg"
     },
     {
-      "nombre": "Producto I",
+      "nombre": "Taza",
       "precio": "710",
       "id": "9",
       "categoria": "starwars",
@@ -81,7 +81,7 @@
       "img": "./assets/img/productos/starwars-04.svg"
     },
     {
-      "nombre": "Producto K",
+      "nombre": "Yoda muñeco",
       "precio": "270",
       "id": "11",
       "categoria": "starwars",
@@ -89,7 +89,7 @@
       "img": "./assets/img/productos/starwars-05.svg"
     },
     {
-      "nombre": "Producto L",
+      "nombre": "Yoda",
       "precio": "710",
       "id": "12",
       "categoria": "starwars",
@@ -129,7 +129,7 @@
       "img": "./assets/img/productos/diversos-04.svg"
     },
     {
-      "nombre": "Producto Q",
+      "nombre": "Pikachu",
       "precio": "230",
       "id": "17",
       "categoria": "diversos",
@@ -137,7 +137,7 @@
       "img": "./assets/img/productos/diversos-05.svg"
     },
     {
-      "nombre": "Producto R",
+      "nombre": "Sonic",
       "precio": "520",
       "id": "18",
       "categoria": "diversos",

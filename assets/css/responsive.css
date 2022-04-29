@@ -57,9 +57,9 @@
         padding: 1rem 4vw 2rem;
     }
 
-   .textarea__bar {
-    top: -6px;
-   }
+    .textarea__bar {
+        top: -6px;
+    }
 
     .todos-los-productos__boton {
         margin-top: 20px;
@@ -129,7 +129,7 @@
 
     .menu__input-buscador::placeholder {
         color: var(--texto-gris-mas-claro);
-     }
+    }
 
     .menu__caja-busqueda:hover {
         width: 35%;
@@ -143,6 +143,12 @@
         display: block;
         font-size: 16px;
         width: 100%;
+    }
+
+    .menu_boton {
+        left: auto;
+        right: 10px;
+        top: 5px;
     }
 
     .menu__login {

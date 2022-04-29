@@ -1,32 +1,25 @@
 import { servicios } from "../service/service.productos.js";
+import { nuevoItem, addEventToInputBuscador } from "../controllers/funciones.controller.js";
 
 const grilla_todos = document.querySelector("[data-tipo-grillaTodosLosProductos]");
 const categoria_producto = document.querySelector("#categoria-producto");
+
+const boton_form = document.querySelector("#input-boton");
+const input_buscador = document.querySelector("[data-tipo-buscador]");
+const lista_desplegable = document.querySelector("[data-lista]");
+
+//   agrega los eventos para deplegar la lista de resultados en el input de busqueda
+addEventToInputBuscador(input_buscador, lista_desplegable, boton_form);
 
 const obtenerCategoria = () => {
     let url = new URL(window.location);
     let categoria = url.searchParams.get("categoria");
 
     if (categoria === null) {
-        return "";              
+        return "";
     }
     return categoria;
 }
-
-const nuevoItem = (id, nombre, precio, img) => {
-    let item = document.createElement("div");
-    item.classList.add("item");
-    let content = `
-        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen producto"></a>
-        <p class="item__nombre">${nombre}</p>
-        <p class="item__precio">$ ${precio}</p>
-        <a class="item__enlace" href="./productos-similares.html?id=${id}">Ver producto</a>`
-        ;
-
-    item.innerHTML = content;
-    return item;
-}
-
 
 const cargarTodosLosProductos = async (categoria) => {
 
@@ -47,6 +40,7 @@ const cargarTodosLosProductos = async (categoria) => {
                 }
             });
         }
+
     } catch (error) {
         console.log(error);
     }
@@ -55,3 +49,5 @@ const cargarTodosLosProductos = async (categoria) => {
 
 grilla_todos.innerHTML = "";
 cargarTodosLosProductos(obtenerCategoria());
+
+
