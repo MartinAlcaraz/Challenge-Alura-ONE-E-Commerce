@@ -58,8 +58,11 @@ const darFormatoMoneda = (input) => {
 inputs_producto.forEach((input) => {
 
     input.addEventListener("blur", (input) => {
-        validar(input.target)
+        if (input.target.dataset.tipo !== "imagen") {
+            validar(input.target);
+        }
     });
+
 
     input.addEventListener("keyup", (input) => {    // comprueba despues de ingresar un caracter del teclado
 
@@ -68,39 +71,60 @@ inputs_producto.forEach((input) => {
         }
         validar(input.target);
 
-       // habilitarBotonSubmit(inputs_contacto, boton_enviar_contacto);
+        // habilitarBotonSubmit(inputs_contacto, boton_enviar_contacto);
     });
 
 });
 
-
-
 boton_submit_producto.addEventListener("click", (event) => {
-    //event.preventDefault();
+
     inputs_producto.forEach((input) => {
         validar(input);
     });
-
 });
 
 
 /////////////////// mostrar imagen en box-image
-inputImagen.addEventListener("change", (event) => cargarImagen(event));
+inputImagen.addEventListener("input", (event) => {
+        
+    if (event.target.files.length > 0) {
+        cargarImagen(event);
+        validar(inputImagen);
+    }
+});
+
+// inputImagen.addEventListener("change", (event) => {
+// });
 
 function cargarImagen(evento) {
+    
     let file = evento.target.files[0];
     let reader = new FileReader();
+    let img = document.querySelector("#imagen-cargada");
     reader.onload = function (event) {
-        let img = document.querySelector("#imagen-cargada");
+
         img.classList.add("box-image__imagen-cargada--visible");
-        img.src = event.target.result;
+        let imagen = event.target.result;
+        img.src = imagen;
 
         let fondo = document.querySelector("#fondo");
         fondo.classList.add("box-image__imagen-fondo--invisible");
-
-        let mensajeDeError = img.parentElement.querySelector(".message-error").innerHTML = "";
     }
-    reader.readAsDataURL(file);
+
+    // ///////   console.log(file.name);
+
+    if (file && file.type.match('image')) {
+        reader.readAsDataURL(file);
+    } else {
+        if (file !== undefined){
+            img.classList.remove("box-image__imagen-cargada--visible");
+            img.src = "";
+        }
+    }
+
+
+
+
 };
 
 

@@ -257,7 +257,7 @@ const mensajeDeErrores = {
         valueMissing: "Ingrese una imagen. ",
         // tooLong: "El asunto no puede tener mas de 50 caracteres. ",
         // tooShort: "El asunto tiene que tener al menos 3 caracteres.",
-        customError: "",
+        customError: "No es un archivo de imagen",
     },
 }
 

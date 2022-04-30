@@ -28,11 +28,9 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
                 let nombre = data.nombre;
                 listaProductos.push(nombre);
             });
-
         } catch (error) {
             console.log("Error al cargar la lista para el input de busqueda");
         }
-
     });
 
 
@@ -51,12 +49,8 @@ export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton
     lista_desplegable.addEventListener("click", (event) => {
         let texto = event.target.innerHTML;
         input_buscador.value = texto;
-
         input_buscador.focus();
-
         lista_desplegable.innerHTML = "";
-
-
     });
 
 
