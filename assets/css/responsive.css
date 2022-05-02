@@ -178,6 +178,10 @@
         grid-gap: 3vw;
     }
 
+    .item__imagen {
+        height: 21vw;
+    }
+
     .productos__ver-todo {
         font-size: 16px;
     }
@@ -363,6 +367,9 @@
         grid-gap: 2vw;
     }
 
+    .item__imagen {
+        height: 12.5vw;
+    }
 
     /* ============= seccion productos-similares  1024px  ==================== */
 

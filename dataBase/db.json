@@ -2,15 +2,15 @@
   "productos": [
     {
       "nombre": "Joystick",
-      "precio": "150",
+      "precio": "150.00",
       "id": "1",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
       "img": "./assets/img/productos/consolas-01.svg"
-      },
+    },
     {
       "nombre": "Producto B",
-      "precio": "50",
+      "precio": "50.00",
       "id": "2",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -18,7 +18,7 @@
     },
     {
       "nombre": "Producto C",
-      "precio": "540",
+      "precio": "540.00",
       "id": "3",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -26,7 +26,7 @@
     },
     {
       "nombre": "Joystick",
-      "precio": "250",
+      "precio": "250.00",
       "id": "4",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -34,7 +34,7 @@
     },
     {
       "nombre": "Producto E",
-      "precio": "220",
+      "precio": "220.00",
       "id": "5",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -42,7 +42,7 @@
     },
     {
       "nombre": "Producto F",
-      "precio": "270",
+      "precio": "270.50",
       "id": "6",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -50,15 +50,15 @@
     },
     {
       "nombre": "Darth Vader",
-      "precio": "140",
+      "precio": "140.00",
       "id": "7",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
       "img": "./assets/img/productos/starwars-01.svg"
-      },
+    },
     {
       "nombre": "Cylon",
-      "precio": "670",
+      "precio": "670.50",
       "id": "8",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -66,7 +66,7 @@
     },
     {
       "nombre": "Taza",
-      "precio": "710",
+      "precio": "710.99",
       "id": "9",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -74,7 +74,7 @@
     },
     {
       "nombre": "Producto J",
-      "precio": "730",
+      "precio": "730.00",
       "id": "10",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -82,7 +82,7 @@
     },
     {
       "nombre": "Yoda muñeco",
-      "precio": "270",
+      "precio": "270.00",
       "id": "11",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -90,7 +90,7 @@
     },
     {
       "nombre": "Yoda",
-      "precio": "710",
+      "precio": "710.50",
       "id": "12",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -98,15 +98,15 @@
     },
     {
       "nombre": "Producto M",
-      "precio": "140",
+      "precio": "140.99",
       "id": "13",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
       "img": "./assets/img/productos/diversos-01.svg"
-      },
+    },
     {
       "nombre": "Producto N",
-      "precio": "60",
+      "precio": "60.00",
       "id": "14",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -114,7 +114,7 @@
     },
     {
       "nombre": "Producto O",
-      "precio": "340",
+      "precio": "340.90",
       "id": "15",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -122,7 +122,7 @@
     },
     {
       "nombre": "Producto P",
-      "precio": "120",
+      "precio": "120.00",
       "id": "16",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -130,7 +130,7 @@
     },
     {
       "nombre": "Pikachu",
-      "precio": "230",
+      "precio": "230.50",
       "id": "17",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
@@ -138,11 +138,35 @@
     },
     {
       "nombre": "Sonic",
-      "precio": "520",
+      "precio": "520.00",
       "id": "18",
       "categoria": "diversos",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
       "img": "./assets/img/productos/diversos-06.svg"
+    },
+    {
+      "nombre": "Tomb Raider",
+      "precio": "99.00",
+      "id": "ffe033fe-f4d3-4e08-a9e5-2ab29f94634f",
+      "categoria": "diversos",
+      "descripcion": "juego de tomb raider similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
+      "img": "./imagenesSubidas/tombRaider.jpg"
+    },
+    {
+      "nombre": "Mario",
+      "precio": "75.50",
+      "id": "ef190b7d-3c7a-491f-b800-464c9d8448b9",
+      "categoria": "diversos",
+      "descripcion": "Muñeco de mario bros similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
+      "img": "./imagenesSubidas/marioBros.jpg"
+    },
+    {
+      "nombre": "Sub-zero",
+      "precio": "189.50",
+      "id": "d49aae52-cf76-4d12-b95e-a0b02d3808c7",
+      "categoria": "diversos",
+      "descripcion": "Muñeco de sub-zero",
+      "img": "./imagenesSubidas/sub-zero.jpg"
     }
   ]
 }

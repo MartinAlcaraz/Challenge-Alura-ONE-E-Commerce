@@ -59,6 +59,7 @@
     width: 100%;
     height: auto;
     /* overflow: auto; */
+
 }
 
 /* n+ 5  ===>  selecciona a partir del 5to elemento de   */
@@ -69,8 +70,12 @@
 }
 
 .item__imagen {    
-    height: auto;
+    height: 45.5vw;  /* igual que el width de la columna  */
     width: 100%;
+    border-style: none;
+    border: 0;
+    object-fit: fill;
+    display: block;
 }
 
 .item__nombre {
@@ -89,6 +94,8 @@
     color: var(--texto-azul);
     margin: 8px 0;
     text-decoration: none;
+    border: none;
+    border-style: 0;
     font-size: 14px;
     font-weight: 700;
 }

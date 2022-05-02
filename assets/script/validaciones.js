@@ -48,6 +48,16 @@ export const habilitarBotonSubmit = (inputs, boton_submit) => {
     }
 }
 
+export const formularioValido = (inputs) => {
+    let esValido = true;
+    inputs.forEach((input) => {
+        if (input.validity.valid == false) {
+            esValido = false;
+        }
+    });
+    return esValido;
+}
+
 const validadores = {
     nombre: (input) => validarNombre(input),        // para cada tipo de input (data-tipo-nombre por ejemplo)
     email: (input) => validarEmail(input),          // existe una llave del objeto validadores para que se ejecute
@@ -266,11 +276,11 @@ function mostrarMensajeDeError(input, tipoDeInput) {
     let mensajes = "";
     tipoDeErrores.forEach((error) => {
 
-        if (input.validity[error]) {
-
+        if (input.validity[error] && mensajes == "") {
             //console.log(mensajeDeErrores[tipoDeInput][error]);
             mensajes += mensajeDeErrores[tipoDeInput][error];
         }
+
     });
     return mensajes;
 

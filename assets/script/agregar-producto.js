@@ -1,5 +1,6 @@
-import { validar, habilitarBotonSubmit } from "./validaciones.js";
+import { validar, habilitarBotonSubmit, formularioValido } from "./validaciones.js";
 import { addEventToInputsContacto } from "./script.js";
+import { servicios } from "../../service/service.productos.js";
 
 const inputs_contacto = document.querySelectorAll(".input-contacto");
 const boton_enviar_contacto = document.querySelector("[data-submit-contacto]");
@@ -8,10 +9,8 @@ const inputImagen = document.querySelector("[data-input-imagen]");
 const boton_subir_img = document.querySelector("#boton-subir-img");
 
 const inputs_producto = document.querySelectorAll(".agregar-producto__input");
-const boton_submit_producto = document.querySelector("[data-input-submit]");
 
-//const input_precio = document.querySelector("[data-input-precio]");
-
+    	        	  
 // da formato tipo moneda al input precio ej $2.754,50
 const darFormatoMoneda = (input) => {
     let numValue = input.value;
@@ -54,6 +53,7 @@ const darFormatoMoneda = (input) => {
     // console.log("numero flotante" , parseFloat(n));
 }
 
+
 // validacion de formulario de agregar producto
 inputs_producto.forEach((input) => {
 
@@ -71,30 +71,22 @@ inputs_producto.forEach((input) => {
         }
         validar(input.target);
 
-        // habilitarBotonSubmit(inputs_contacto, boton_enviar_contacto);
     });
 
 });
 
-boton_submit_producto.addEventListener("click", (event) => {
-
-    inputs_producto.forEach((input) => {
-        validar(input);
-    });
-});
 
 
 /////////////////// mostrar imagen en box-image
 inputImagen.addEventListener("input", (event) => {
-        
+
+    // si se elige un archivo se carga y valida el archivo de imagen
     if (event.target.files.length > 0) {
         cargarImagen(event);
         validar(inputImagen);
     }
 });
 
-// inputImagen.addEventListener("change", (event) => {
-// });
 
 function cargarImagen(evento) {
     
@@ -111,20 +103,17 @@ function cargarImagen(evento) {
         fondo.classList.add("box-image__imagen-fondo--invisible");
     }
 
-    // ///////   console.log(file.name);
-
+    // si existe un archivo y es una imagen
     if (file && file.type.match('image')) {
         reader.readAsDataURL(file);
     } else {
-        if (file !== undefined){
+        
+        //  si se carga un archivo y no es una imagen se borra al anteriormente cargada( si se habia cargado una antes) para mostrar el mensaje de error
+        if (file !== undefined) {
             img.classList.remove("box-image__imagen-cargada--visible");
             img.src = "";
         }
     }
-
-
-
-
 };
 
 
