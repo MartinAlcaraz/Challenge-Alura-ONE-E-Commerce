@@ -94,11 +94,9 @@ function cargarImagen(evento) {
     let reader = new FileReader();
     let img = document.querySelector("#imagen-cargada");
     reader.onload = function (event) {
-
         img.classList.add("box-image__imagen-cargada--visible");
         let imagen = event.target.result;
         img.src = imagen;
-
         let fondo = document.querySelector("#fondo");
         fondo.classList.add("box-image__imagen-fondo--invisible");
     }
@@ -126,4 +124,5 @@ boton_subir_img.addEventListener("click", (event) => {
 // validacion de formulario de contacto
 
 addEventToInputsContacto(inputs_contacto, boton_enviar_contacto);
+
 

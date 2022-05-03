@@ -14,6 +14,10 @@
     .todos-los-productos__boton {
         padding: 10px 8px;
     }
+
+    .caja-dialogo {
+        top: 50vh;
+    }
 }
 
 @media screen and (min-width: 540px) {
@@ -306,6 +310,14 @@
         width: 100%;
         padding: 16px;
     }
+
+    /* seccion borrar producto 768px */
+
+    .caja-dialogo {
+        width: 60vw;
+        left: 20vw;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {

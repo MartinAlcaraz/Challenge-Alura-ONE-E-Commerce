@@ -14,6 +14,39 @@ export const nuevoItem = (id, nombre, precio, img) => {
     return item;
 }
 
+export const nuevoItemEditarBorrar = (id, nombre, precio, img) => {
+    let item = document.createElement("div");
+    item.classList.add("item");
+    let content = `
+        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen producto"></a>
+        <p class="item__nombre">${nombre}</p>
+        <p class="item__precio">$ ${precio}</p>
+        <a class="item__enlace" href="./productos-similares.html?id=${id}">Ver producto</a>
+        <div class="item__enlace--editar-borrar"><a class="item__enlace" href="./editar-producto.html?id=${id}"><div class="item__enlace--editar"></div></a>
+        <a class="item__enlace" href="./borrar-producto.html?id=${id}"><div class="item__enlace--borrar"></div</a></div>`
+        ;
+
+    item.innerHTML = content;
+    return item;
+}
+
+export const nuevoItemConDescripcion = (id, nombre, precio, descripcion, img) => {
+    let item = document.createElement("div");
+    let contenido = `
+    <div class="item-seleccionado">
+        <img class="item-seleccionado__imagen" src=${img}>
+        <div class="item-seleccionado__info">
+            <p class="item-seleccionado__nombre">${nombre}</p>
+            <p class="item-seleccionado__precio">$ ${precio}</p>
+            <p class="item-seleccionado__descripcion">${descripcion}</p>
+        </div>    
+    </div>`
+        ;
+    item.innerHTML = contenido;
+    return item;
+}
+
+
 export const addEventToInputBuscador = (input_buscador, lista_desplegable, boton_form) => {
 
     let listaProductos = [];

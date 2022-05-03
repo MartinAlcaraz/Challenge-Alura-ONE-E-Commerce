@@ -1,5 +1,5 @@
 import { servicios } from "../service/service.productos.js";
-import { nuevoItem, addEventToInputBuscador } from "../controllers/funciones.controller.js";
+import { nuevoItem, nuevoItemConDescripcion, addEventToInputBuscador } from "../controllers/funciones.controller.js";
 
 
 const grilla_similares = document.querySelector("[data-tipo-grilla-similares]");
@@ -12,21 +12,6 @@ const lista_desplegable = document.querySelector("[data-lista]");
 //   agrega los eventos para deplegar la lista de resultados en el input de busqueda
 addEventToInputBuscador(input_buscador, lista_desplegable, boton_form);
 
-const nuevoItemConDescripcion = (id, nombre, precio, descripcion, img) => {
-    let item = document.createElement("div");
-    let contenido = `
-    <div class="item-seleccionado">
-        <img class="item-seleccionado__imagen" src=${img}>
-        <div class="item-seleccionado__info">
-            <p class="item-seleccionado__nombre">${nombre}</p>
-            <p class="item-seleccionado__precio">$ ${precio}</p>
-            <p class="item-seleccionado__descripcion">${descripcion}</p>
-        </div>    
-    </div>`
-        ;
-    item.innerHTML = contenido;
-    return item;
-}
 
 
 const obtenerId = () => {
@@ -57,7 +42,6 @@ const cargarProductosSimilares = async (id) => {
                 grilla_similares.appendChild(item);
             }
         });
-
 
     } catch (error) {
         alert("Ocurrio un error al cargar los productos");

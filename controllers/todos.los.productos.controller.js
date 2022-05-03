@@ -1,5 +1,5 @@
 import { servicios } from "../service/service.productos.js";
-import { nuevoItem, addEventToInputBuscador } from "../controllers/funciones.controller.js";
+import { nuevoItem, addEventToInputBuscador, nuevoItemEditarBorrar } from "../controllers/funciones.controller.js";
 
 const grilla_todos = document.querySelector("[data-tipo-grillaTodosLosProductos]");
 const categoria_producto = document.querySelector("#categoria-producto");
@@ -28,7 +28,7 @@ const cargarTodosLosProductos = async (categoria) => {
 
         if (categoria == "") {
             listaDeProductos.forEach((data) => {
-                let item = nuevoItem(data.id, data.nombre, data.precio, data.img);
+                let item = nuevoItemEditarBorrar(data.id, data.nombre, data.precio, data.img);
                 grilla_todos.appendChild(item);
             });
         } else {

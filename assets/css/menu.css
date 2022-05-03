@@ -117,18 +117,6 @@
    opacity: 0.9;
 }
 
-/* .caja-busqueda__lista:empty {
-   display: none;
-} */
-
-/* .menu__caja-busqueda:not(:hover) .caja-busqueda__lista {
-   display: none;
-}  */
-
-/* .menu__caja-busqueda:not(:hover) .caja-busqueda__list-item {
-   display: block;
-} */
-
 .caja-busqueda__list-item {
    
    display: block;
