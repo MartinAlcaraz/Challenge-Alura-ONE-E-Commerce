@@ -109,8 +109,8 @@ const validarDescripcion = (input) => {
     if (texto.length < 10) {
         mensaje = "La descripcion tiene que tener al menos 10 caracteres."
     } else {
-        if (texto.length > 300) {
-            mensaje = "La descripcion tiene que tener menos de 300 caracteres."
+        if (texto.length > 500) {
+            mensaje = "La descripcion tiene que tener menos de 500 caracteres."
         }
     }
     input.setCustomValidity(mensaje);

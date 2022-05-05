@@ -1,6 +1,6 @@
-import { validar, habilitarBotonSubmit, formularioValido } from "./validaciones.js";
+import { validar } from "./validaciones.js";
 import { addEventToInputsContacto } from "./script.js";
-import { servicios } from "../../service/service.productos.js";
+import { darFormatoMoneda } from "../../controllers/funciones.controller.js";
 
 const inputs_contacto = document.querySelectorAll(".input-contacto");
 const boton_enviar_contacto = document.querySelector("[data-submit-contacto]");
@@ -10,48 +10,6 @@ const boton_subir_img = document.querySelector("#boton-subir-img");
 
 const inputs_producto = document.querySelectorAll(".agregar-producto__input");
 
-    	        	  
-// da formato tipo moneda al input precio ej $2.754,50
-const darFormatoMoneda = (input) => {
-    let numValue = input.value;
-    let num = numValue.replace(/[\$\.\,]/g, "");      // elimina los signos $ . , 
-
-    // num = num.replace(/[\,]+/g, "");      
-    num = num.replace(/^0+/g, "");          //  elimina los ceros delanteros
-
-    switch (num.length) {
-        case 0:
-            num = "000";                //  si no se ingresa ningun número
-            break;
-        case 1:
-            num = "00" + num;             // si se ingresa un solo número
-            break;
-        case 2:
-            num = "0" + num;              // si se ingresan dos números
-            break;
-    }
-    let numero = "$";
-    for (let i = 0; i < num.length; i++) {
-
-        if ((num.length - i) == 2) {
-            numero += ",";
-        }
-        if (((num.length >= 6) && (num.length - i == 5)) || ((num.length >= 9) && (num.length - i == 8))) {
-            numero += ".";
-        }
-        numero += num[i];
-    }
-
-    input.value = numero;        // cambia el valor del input precio, para que se vea como un monto de dinero.
-
-
-    // instrucciones para ver el numero real, en numero flotante. Ej 52,43
-
-    // let n = numero.replace(/[\$\.]/g, "");      // elimina los signos $ y .   
-    // console.log("numero sin signos : ", n);
-    // n = n.replace(/[\,]+/g, ".");            // cambia la coma por el punto para convertir el numero en numero flotante        
-    // console.log("numero flotante" , parseFloat(n));
-}
 
 
 // validacion de formulario de agregar producto
@@ -82,6 +40,7 @@ inputImagen.addEventListener("input", (event) => {
 
     // si se elige un archivo se carga y valida el archivo de imagen
     if (event.target.files.length > 0) {
+        
         cargarImagen(event);
         validar(inputImagen);
     }
@@ -91,6 +50,7 @@ inputImagen.addEventListener("input", (event) => {
 function cargarImagen(evento) {
     
     let file = evento.target.files[0];
+    
     let reader = new FileReader();
     let img = document.querySelector("#imagen-cargada");
     reader.onload = function (event) {

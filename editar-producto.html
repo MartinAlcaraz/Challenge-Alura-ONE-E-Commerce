@@ -88,7 +88,7 @@
                             </div>
 
                             <input class="box-image__input--image agregar-producto__input" type="file" data-input-imagen
-                                data-tipo="imagen" name="img" accept=".jpg, .jpeg, .png" required>
+                                data-tipo="imagen-editar" name="img" accept=".jpg, .jpeg, .png">
                             <img class="box-image__imagen-cargada" id="imagen-cargada">
                             <span class="message-error">Este campo no es valido</span>
                         </div>
@@ -123,7 +123,7 @@
                     <div class="textarea-container agregar-producto__input-container">
                         <textarea class="textarea input agregar-producto__input" name="descripcion"
                             data-input-descripcion data-tipo="descripcion" type="text" rows="4" autocomplete="off"
-                            placeholder="Descripcion del producto" minlength="10" maxlength="100" required></textarea>
+                            placeholder="Descripcion del producto" minlength="10" maxlength="500" required></textarea>
                         <label class="textarea-label" for="descripcion">Descripcion del producto</label>
                         <span class="textarea__bar"></span>
                         <span class="message-error">Este campo no es valido</span>
@@ -202,9 +202,8 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
-        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./controllers/editar-producto.controller.js" type="module"></script>
     <script src="./assets/script/agregar-producto.js" type="module"></script>
 </body>

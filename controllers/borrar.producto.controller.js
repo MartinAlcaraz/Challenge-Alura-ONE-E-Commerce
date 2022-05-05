@@ -1,5 +1,5 @@
 import { servicios } from "../service/service.productos.js";
-import { nuevoItemConDescripcion, addEventToInputBuscador } from "../controllers/funciones.controller.js";
+import { nuevoItemConDescripcion, addEventToInputBuscador, obtenerId } from "../controllers/funciones.controller.js";
 
 const pantallaDialogo = document.querySelector("#pantalla-dialogo");
 
@@ -55,23 +55,14 @@ const borrarProductos = async () => {
 
 }
 
-const obtenerId = () => {
-    //  funcion que obtiene el id del objeto desde la url de la pagina
-    const url = new URL(window.location);
-    const id = url.searchParams.get("id");
 
-    if (id === null) {
-        window.location.href = "./index.html";
-    }
-    return id;
-}
 
 const cargarProducto = async () => {
 
     try {
         let id = obtenerId();
         let prod = await servicios.obtenerProducto(id);
-
+        
         if (prod.nombre) {
             let itemConDescripcion = nuevoItemConDescripcion(prod.id, prod.nombre, prod.precio, prod.descripcion, prod.img);
             producto_descripcion.appendChild(itemConDescripcion);
