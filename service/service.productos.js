@@ -23,7 +23,7 @@ const borrarProducto = (id) => {
 }
 
 const editarProducto = async (id, nombre, precio, descripcion, categoria, img) => {
-  console.log(id);
+  
   return fetch(`http://localhost:3000/productos/${id}`, {
     method: "PUT",
     headers: {

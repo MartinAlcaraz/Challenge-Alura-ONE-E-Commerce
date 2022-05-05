@@ -41,7 +41,10 @@ const editarProductoImagen = async (file, data) => {
         let responseCloudinary = await servicios.subirImagenCloudinary(file);
 
         if (responseCloudinary.statusText == "OK") {
-            let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, categoria, responseCloudinary.secure_url);
+            console.log("responseCloudinary: ", responseCloudinary.data);
+            console.log("responseCloudinary.secure_url: ", responseCloudinary.data.secure_url);
+                                                                        
+            let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, categoria, responseCloudinary.data.secure_url);
             
             if(responseEditarProd.ok){
                 window.location.href = "./todos-los-productos.html";

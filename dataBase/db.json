@@ -3,18 +3,18 @@
     {
       "nombre": "Joystick",
       "precio": "150.00",
-      "categoria": "diversos",
+      "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
-      "img": "./imagenesSubidas/sub-zero.jpg",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651780563/r0vh51dproxbpqggi3sa.jpg",
       "id": "1"
     },
     {
       "nombre": "Producto B",
       "precio": "50.00",
-      "id": "2",
       "categoria": "consolas",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
-      "img": "./assets/img/productos/consolas-02.svg"
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651780594/urwcwwob3lobupp3yt0g.jpg",
+      "id": "2"
     },
     {
       "nombre": "Producto C",
@@ -91,9 +91,10 @@
     {
       "nombre": "Yoda",
       "precio": "710.50",
+      "id": "12",
       "categoria": "starwars",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam.",
-      "id": "12"
+      "img": "./assets/img/productos/starwars-06.svg"
     },
     {
       "nombre": "Producto M",
