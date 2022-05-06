@@ -68,9 +68,41 @@
       "nombre": "producto asdwerwe",
       "precio": "12.00",
       "id": "ce9fa10d-517d-42c4-881e-a89d5338b773",
-      "categoria": "diversos",
+      "categoria": "starwars",
       "descripcion": "oiuweqr iqw erusdf asdfi isudafpiuapsidf asdf",
       "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651858361/ggvul0ccfjn4vwofdfq7.png"
+    },
+    {
+      "nombre": "Cylon",
+      "precio": "9.00",
+      "id": "d971745e-3e8e-4ded-b251-3013f4127e90",
+      "categoria": "starwars",
+      "descripcion": "asdfqer qwer qwer wqer dasf qewrqwer sadfasdfsdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859051/hpeibhdx7xpkm8ay7rgf.png"
+    },
+    {
+      "nombre": "Taza",
+      "precio": "4.00",
+      "id": "b8397347-1d3c-49b9-a812-89e58c7d8411",
+      "categoria": "starwars",
+      "descripcion": "iwieur qweriu  qwepr qwer piower pwqeir piwqe rpoiqwe rpiuoqwer",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859109/jikubo1fe7ig1no5ytrl.png"
+    },
+    {
+      "nombre": "Yoda",
+      "precio": "34.00",
+      "id": "61eaf5a9-b660-4a30-93c8-69d086ab16e6",
+      "categoria": "starwars",
+      "descripcion": "liwe i dsaf ;sad fi sadf ;aisdf ;las dflksdfsdfsdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859154/iobkb4hecwcjwjtbcguv.png"
+    },
+    {
+      "nombre": "producto ererertt",
+      "precio": "3232.00",
+      "id": "56de7974-7b38-4747-b6bb-6e9968fd8047",
+      "categoria": "diversos",
+      "descripcion": "wqerqwer wqerqwer sadfasdfas dfasdfsadf sadfasdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859208/tcjskyyzhupjeyz6xkag.png"
     }
   ]
 }
