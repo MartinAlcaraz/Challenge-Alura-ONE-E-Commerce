@@ -1,4 +1,5 @@
 
+
 const listaProductos = () =>
   fetch("http://localhost:3000/productos").then((respuesta) => respuesta.json());
 
@@ -23,7 +24,7 @@ const borrarProducto = (id) => {
 }
 
 const editarProducto = async (id, nombre, precio, descripcion, categoria, img) => {
-  
+
   return fetch(`http://localhost:3000/productos/${id}`, {
     method: "PUT",
     headers: {
@@ -54,6 +55,9 @@ const subirImagenCloudinary = (file) => {
   });
 
 }
+
+
+/////////////////////
 
 export const servicios = {
   listaProductos,

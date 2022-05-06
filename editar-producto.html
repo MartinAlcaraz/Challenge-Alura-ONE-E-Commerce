@@ -25,6 +25,7 @@
     <link href="./assets/css/bloque-productos-similares.css" rel="stylesheet" />
     <link href="./assets/css/bloque-todos-los-productos.css" rel="stylesheet" />
     <link href="./assets/css/bloque-agregar-producto.css" rel="stylesheet" />
+    <link href="./assets/css/pantalla-dialogo.css" rel="stylesheet" />
 
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
@@ -134,6 +135,15 @@
                         value="Editar producto" data-input-submit-editar>
 
                 </form>
+                <div class="pantalla-dialogo" id="pantalla-dialogo">
+                    <div class="caja-dialogo" id="caja-dialogo">
+                        <p class="caja-dialogo__texto">Está seguro que desea editar el producto?</p>
+                        <div class="caja-dialogo__botones">
+                            <button class="caja-dialogo__boton boton" data-boton-aceptar>Si</button>
+                            <button class="caja-dialogo__boton boton" data-boton-cancelar>No</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         </div>

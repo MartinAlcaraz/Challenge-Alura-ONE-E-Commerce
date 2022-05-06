@@ -9,6 +9,8 @@ const boton_cancelar = document.querySelector("[data-boton-cancelar]");
 
 const producto_descripcion = document.querySelector("[data-tipo-producto-descripcion]");
 
+let img_producto;
+
 const boton_form = document.querySelector("#input-boton");
 const input_buscador = document.querySelector("[data-tipo-buscador]");
 const lista_desplegable = document.querySelector("[data-lista]");
@@ -16,9 +18,9 @@ const lista_desplegable = document.querySelector("[data-lista]");
 //   agrega los eventos para deplegar la lista de resultados en el input de busqueda
 addEventToInputBuscador(input_buscador, lista_desplegable, boton_form);
 
+
 boton_aceptar.addEventListener("click", () => {
     borrarProductos();
-
 });
 
 boton_cancelar.addEventListener("click", () => {
@@ -64,6 +66,7 @@ const cargarProducto = async () => {
         let prod = await servicios.obtenerProducto(id);
         
         if (prod.nombre) {
+            img_producto = prod.img;
             let itemConDescripcion = nuevoItemConDescripcion(prod.id, prod.nombre, prod.precio, prod.descripcion, prod.img);
             producto_descripcion.appendChild(itemConDescripcion);
         }else{

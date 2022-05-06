@@ -5,6 +5,10 @@ import { validar, formularioValido } from "../assets/script/validaciones.js";
 const inputs_producto = document.querySelectorAll(".agregar-producto__input");
 const boton_submit_producto = document.querySelector("[data-input-submit]");
 
+const pantallaDialogo = document.querySelector("#pantalla-dialogo");
+const boton_aceptar = document.querySelector("[data-boton-aceptar]");
+const boton_cancelar = document.querySelector("[data-boton-cancelar]");
+
 // inputs de barra de busqueda
 const boton_form = document.querySelector("#input-boton");
 const input_buscador = document.querySelector("[data-tipo-buscador]");
@@ -25,6 +29,33 @@ const convertirMonedaAString = (st) => {
     return st;
 }
 
+const subirProductoEImagen = async (file, data) => {
+
+    try {
+        let responseCloudinary = await servicios.subirImagenCloudinary(file);
+
+        if (responseCloudinary.statusText == "OK") {
+
+            servicios.subirProducto(data.nombre, data.precio, data.categoria, data.descripcion, responseCloudinary.data.secure_url).then((response) => {
+                if (response.ok) {
+                    window.location.href = "./todos-los-productos.html";
+                }
+            }).catch((err) => {
+                console.log(err);
+                window.location.href = "./hubo-un-problema.html";
+            });
+
+        } else {
+            console.log("problema con imagen");
+            window.location.href = "./hubo-un-problema.html";
+        }
+
+    } catch (error) {
+        console.log("Errrorr: ", error);
+        window.location.href = "./hubo-un-problema.html";
+    }
+}
+
 boton_submit_producto.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -33,29 +64,38 @@ boton_submit_producto.addEventListener("click", (event) => {
     });
 
     if (formularioValido(inputs_producto)) {
+        pantallaDialogo.classList.add("pantalla-dialogo--enabled");
+    }
+});
 
-        let data = getDatos();
-        servicios.subirProducto(data.nombre, data.precio, data.categoria, data.descripcion, data.img).then(() => {
+boton_aceptar.addEventListener("click", () => {
+    let data = getDatos();
+    let file = document.querySelector("[data-input-imagen]").files[0];
+    //console.log("file: ", file);
+    subirProductoEImagen(file, data);
+});
 
-            window.location.href = "./todos-los-productos.html";
-        }
-        ).catch((err) => console.log(err));
+boton_cancelar.addEventListener("click", () => {
+    pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
+});
+
+
+pantallaDialogo.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains('pantalla-dialogo')) {
+        pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
     }
 });
 
 
 const getDatos = () => {
     let obj = {};
-
-    let file = document.querySelector("[data-input-imagen]").files[0];
-    let directorio = "./imagenesSubidas/"+file.name;
     let precio = document.querySelector("[data-input-precio]").value;
-    
+
     obj.nombre = document.querySelector("[data-input-nombre]").value;
     obj.precio = convertirMonedaAString(precio);
     obj.categoria = "diversos";
     obj.descripcion = document.querySelector("[data-input-descripcion]").value;
-    obj.img = directorio;
 
     return obj;
 }

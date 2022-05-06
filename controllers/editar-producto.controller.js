@@ -9,12 +9,16 @@ const imagen = document.querySelector("#imagen-cargada");
 
 const input_nombre = document.querySelector("[data-input-nombre]");
 
+const pantallaDialogo = document.querySelector("#pantalla-dialogo");
+const boton_aceptar = document.querySelector("[data-boton-aceptar]");
+const boton_cancelar = document.querySelector("[data-boton-cancelar]");
+
 const input_precio = document.querySelector("[data-input-precio]");
 const input_descripcion = document.querySelector("[data-input-descripcion]");
 //const input_img = document.querySelector("[data-input-imagen]");
 let id_producto;
 let categoria;
-
+let img_old;
 
 // inputs de barra de busqueda
 const boton_form = document.querySelector("#input-boton");
@@ -35,35 +39,52 @@ const convertirMonedaAString = (st) => {
 }
 
 
-const editarProductoImagen = async (file, data) => {
+const editarProductoEImagen = async (file, data) => {
 
     try {
         let responseCloudinary = await servicios.subirImagenCloudinary(file);
 
         if (responseCloudinary.statusText == "OK") {
-            console.log("responseCloudinary: ", responseCloudinary.data);
-            console.log("responseCloudinary.secure_url: ", responseCloudinary.data.secure_url);
-                                                                        
+            //console.log("responseCloudinary: ", responseCloudinary.data);
+            //console.log("responseCloudinary.secure_url: ", responseCloudinary.data.secure_url);
+
             let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, categoria, responseCloudinary.data.secure_url);
-            
-            if(responseEditarProd.ok){
+
+            if (responseEditarProd.ok) {
                 window.location.href = "./todos-los-productos.html";
-            }else{
-                window.location.href = "./hubo-un-problema.html";    
+            } else {
+                window.location.href = "./hubo-un-problema.html";
             }
-                        
+
         } else {
             //console.log("Hubo un problema al subir la imagen a cloudynary.");    
             window.location.href = "./hubo-un-problema.html";
         }
+
     } catch (error) {
         console.log("Errrorr: ", error);
         window.location.href = "./hubo-un-problema.html";
     }
 }
 
+const editarProductoSolo = async (data) =>{
+    try {
+        let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, categoria, data.img);
 
-boton_editar_producto.addEventListener("click", (event) => {
+        if (responseEditarProd.ok) {
+            window.location.href = "./todos-los-productos.html";
+        } else {
+            window.location.href = "./hubo-un-problema.html";
+        }
+
+    } catch (error) {
+        console.log(error);
+        window.location.href = "./hubo-un-problema.html";
+    }
+}
+
+
+boton_aceptar.addEventListener("click", () => {
     event.preventDefault();
 
     inputs_producto.forEach((input) => {
@@ -75,10 +96,42 @@ boton_editar_producto.addEventListener("click", (event) => {
         let data = getDatos();
         let file = document.querySelector("[data-input-imagen]").files[0];
 
-        editarProductoImagen(file, data);
+        if (file == undefined) {    // si no se subió una imagen nueva se utiliza la que ya estaba guardada.
+            data.img = img_old;
+            editarProductoSolo(data);
+        } else {
+            editarProductoEImagen(file, data);
+        }
     }
 });
 
+boton_cancelar.addEventListener("click", () => {
+    pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
+});
+
+
+pantallaDialogo.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains('pantalla-dialogo')) {
+        pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
+    }
+});
+
+
+
+boton_editar_producto.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    inputs_producto.forEach((input) => {
+        validar(input);
+    });
+
+    if (formularioValido(inputs_producto)) {
+        pantallaDialogo.classList.add("pantalla-dialogo--enabled");
+    }
+
+});
 
 
 const getDatos = () => {
@@ -104,7 +157,7 @@ const cargarProductoAEditar = (prod) => {
     input_precio.value = prod.precio;
     darFormatoMoneda(input_precio);
     input_descripcion.value = prod.descripcion;
-
+    img_old = prod.img;
     cargarImagen(prod.img);
 }
 

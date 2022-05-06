@@ -25,6 +25,7 @@
     <link href="./assets/css/bloque-productos-similares.css" rel="stylesheet" />
     <link href="./assets/css/bloque-todos-los-productos.css" rel="stylesheet" />
     <link href="./assets/css/bloque-agregar-producto.css" rel="stylesheet" />
+    <link href="./assets/css/pantalla-dialogo.css" rel="stylesheet" />
 
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
@@ -134,6 +135,15 @@
                         value="Agregar producto" data-input-submit>
 
                 </form>
+                <div class="pantalla-dialogo" id="pantalla-dialogo">
+                    <div class="caja-dialogo" id="caja-dialogo">
+                        <p class="caja-dialogo__texto">Está seguro que desea agregar este producto?</p>
+                        <div class="caja-dialogo__botones">
+                            <button class="caja-dialogo__boton boton" data-boton-aceptar>Si</button>
+                            <button class="caja-dialogo__boton boton" data-boton-cancelar>No</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         </div>
@@ -202,6 +212,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
         integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
