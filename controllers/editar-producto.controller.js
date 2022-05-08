@@ -8,16 +8,16 @@ const boton_editar_producto = document.querySelector("[data-input-submit-editar]
 const imagen = document.querySelector("#imagen-cargada");
 
 const input_nombre = document.querySelector("[data-input-nombre]");
+const input_precio = document.querySelector("[data-input-precio]");
+const input_descripcion = document.querySelector("[data-input-descripcion]");
+const input_categoria = document.querySelector("[data-input-categoria]");
+
 
 const pantallaDialogo = document.querySelector("#pantalla-dialogo");
 const boton_aceptar = document.querySelector("[data-boton-aceptar]");
 const boton_cancelar = document.querySelector("[data-boton-cancelar]");
 
-const input_precio = document.querySelector("[data-input-precio]");
-const input_descripcion = document.querySelector("[data-input-descripcion]");
-//const input_img = document.querySelector("[data-input-imagen]");
 let id_producto;
-let categoria;
 let img_old;
 
 // inputs de barra de busqueda
@@ -69,7 +69,7 @@ const editarProductoEImagen = async (file, data) => {
 
 const editarProductoSolo = async (data) =>{
     try {
-        let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, categoria, data.img);
+        let responseEditarProd = await servicios.editarProducto(id_producto, data.nombre, data.precio, data.descripcion, data.categoria, data.img);
 
         if (responseEditarProd.ok) {
             window.location.href = "./todos-los-productos.html";
@@ -85,7 +85,6 @@ const editarProductoSolo = async (data) =>{
 
 
 boton_aceptar.addEventListener("click", () => {
-    event.preventDefault();
 
     inputs_producto.forEach((input) => {
         validar(input);
@@ -114,6 +113,7 @@ pantallaDialogo.addEventListener("click", (event) => {
 
     if (event.target.classList.contains('pantalla-dialogo')) {
         pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
+        document.querySelector("[data-input-imagen]").disabled = false;
     }
 });
 
@@ -129,6 +129,7 @@ boton_editar_producto.addEventListener("click", (event) => {
 
     if (formularioValido(inputs_producto)) {
         pantallaDialogo.classList.add("pantalla-dialogo--enabled");
+        document.querySelector("[data-input-imagen]").disabled = true;
     }
 
 });
@@ -137,13 +138,11 @@ boton_editar_producto.addEventListener("click", (event) => {
 const getDatos = () => {
     let obj = {};
 
-    //let file = document.querySelector("[data-input-imagen]").files[0];
-
     let precio = document.querySelector("[data-input-precio]").value;
 
     obj.nombre = document.querySelector("[data-input-nombre]").value;
     obj.precio = convertirMonedaAString(precio);
-    obj.categoria = "diversos";
+    obj.categoria = input_categoria.value;
     obj.descripcion = document.querySelector("[data-input-descripcion]").value;
     return obj;
 }
@@ -151,7 +150,7 @@ const getDatos = () => {
 const cargarProductoAEditar = (prod) => {
 
     id_producto = prod.id;
-    categoria = prod.categoria;
+    input_categoria.value = prod.categoria;
 
     input_nombre.value = prod.nombre;
     input_precio.value = prod.precio;

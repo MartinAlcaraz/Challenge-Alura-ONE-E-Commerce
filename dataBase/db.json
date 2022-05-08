@@ -1,8 +1,8 @@
 {
   "productos": [
     {
-      "nombre": "Joystick",
-      "precio": "200.00",
+      "nombre": "Joystick xbox one",
+      "precio": "50000.00",
       "categoria": "consolas",
       "descripcion": "asdf asdf  asdf asdf wer qer hg gb tuj ",
       "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651856488/oaigf6iw7s2tukvdl4ri.png",
@@ -103,6 +103,54 @@
       "categoria": "diversos",
       "descripcion": "wqerqwer wqerqwer sadfasdfas dfasdfsadf sadfasdf",
       "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859208/tcjskyyzhupjeyz6xkag.png"
+    },
+    {
+      "nombre": "yoda 5",
+      "precio": "445550.00",
+      "categoria": "starwars",
+      "descripcion": "ajdlfks aerqwer pxcvsadfasd asdfasdf qwerqwerqwerqwerwqerqwer werqwer",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651922429/ncoj9tx699lsey4rfvdp.png",
+      "id": "cc2ef9ac-6d08-4105-8323-2da7dafdba87"
+    },
+    {
+      "nombre": "juguete starwars",
+      "precio": "12.00",
+      "id": "b04af082-11f8-4ae9-af24-60aefa47fb01",
+      "categoria": "starwars",
+      "descripcion": "asdf asdf asdf asdfasdf asdfasdfasdfasdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651927047/z7afamqqh8ylnfn0p5pv.png"
+    },
+    {
+      "nombre": "consola nintendo",
+      "precio": "500.00",
+      "id": "7ae81b91-df02-488d-8da7-ba4b14de07ca",
+      "categoria": "consolas",
+      "descripcion": "conosla sadfasdf asdf asdf asdf qwer qre wer sd f",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651927099/u3an2wjvjawndfrsnnvd.png"
+    },
+    {
+      "nombre": "producto blbla",
+      "precio": "8900.00",
+      "categoria": "diversos",
+      "descripcion": "coas saf asdf wero a sfsdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651928157/xqczqyuwpjh4jl0esykt.png",
+      "id": "634a017a-d11f-4b38-a573-959dd509a007"
+    },
+    {
+      "nombre": "Producot sdfafd",
+      "precio": "780.90",
+      "id": "a87a52e7-ab57-4268-aa01-030460964fe1",
+      "categoria": "diversos",
+      "descripcion": "poiwier po sadf [po sadf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651928218/wxveirtoaxtzcgeygoc9.png"
+    },
+    {
+      "nombre": "asdf",
+      "precio": "89.89",
+      "id": "cade2ba3-e30d-40df-9fd1-0542495cfefc",
+      "categoria": "starwars",
+      "descripcion": "werwqerdasfasdf",
+      "img": "https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1652012309/szhy8ewtwhxzwbgwuey1.png"
     }
   ]
 }

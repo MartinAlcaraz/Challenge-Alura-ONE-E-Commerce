@@ -50,6 +50,32 @@
     color: var(--texto-gris-mas-claro);
    }
    
+    /* ===== input select ======= */
+
+    .agregar-producto__input-container--select {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    .agregar-producto__label {
+        display: inline-block;
+        flex-grow: 2;
+        width: auto;
+        
+    }
+
+    .agregar-producto__input-select {
+        display: inline-block;
+         flex-grow: 8; 
+         width: auto;
+        
+        
+    }
+
+    
+
    /* ========= barra expandible =============== */
    
    

@@ -5,6 +5,7 @@ import { validar, formularioValido } from "../assets/script/validaciones.js";
 const inputs_producto = document.querySelectorAll(".agregar-producto__input");
 const boton_submit_producto = document.querySelector("[data-input-submit]");
 
+
 const pantallaDialogo = document.querySelector("#pantalla-dialogo");
 const boton_aceptar = document.querySelector("[data-boton-aceptar]");
 const boton_cancelar = document.querySelector("[data-boton-cancelar]");
@@ -65,6 +66,7 @@ boton_submit_producto.addEventListener("click", (event) => {
 
     if (formularioValido(inputs_producto)) {
         pantallaDialogo.classList.add("pantalla-dialogo--enabled");
+        document.querySelector("[data-input-imagen]").disabled = true;
     }
 });
 
@@ -84,6 +86,7 @@ pantallaDialogo.addEventListener("click", (event) => {
 
     if (event.target.classList.contains('pantalla-dialogo')) {
         pantallaDialogo.classList.remove("pantalla-dialogo--enabled");
+        document.querySelector("[data-input-imagen]").disabled = false;
     }
 });
 
@@ -94,7 +97,7 @@ const getDatos = () => {
 
     obj.nombre = document.querySelector("[data-input-nombre]").value;
     obj.precio = convertirMonedaAString(precio);
-    obj.categoria = "diversos";
+    obj.categoria = document.querySelector("[data-input-categoria]").value;
     obj.descripcion = document.querySelector("[data-input-descripcion]").value;
 
     return obj;
