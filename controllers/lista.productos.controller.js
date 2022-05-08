@@ -45,7 +45,7 @@ const cargarProductos = async () => {
     }
 }
 
-//grilla_starwars.innerHTML = "";
+grilla_starwars.innerHTML = "";
 grilla_consolas.innerHTML = "";
 grilla_diversos.innerHTML = "";
 cargarProductos();

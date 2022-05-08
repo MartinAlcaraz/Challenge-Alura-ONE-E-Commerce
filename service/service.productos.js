@@ -1,14 +1,14 @@
 
 
 const listaProductos = () =>
-  fetch("http://localhost:3000/productos").then((respuesta) => respuesta.json());
+  fetch("https://data-base-e-commerce.herokuapp.com/productos").then((respuesta) => respuesta.json());
 
 const obtenerProducto = (id) =>
-  fetch(`http://localhost:3000/productos/${id}`).then((respuesta) => respuesta.json());
+  fetch(`https://data-base-e-commerce.herokuapp.com/productos/${id}`).then((respuesta) => respuesta.json());
 
 
 const subirProducto = (nombre, precio, categoria, descripcion, img) => {
-  return fetch("http://localhost:3000/productos/", {
+  return fetch("https://data-base-e-commerce.herokuapp.com/productos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,14 +18,14 @@ const subirProducto = (nombre, precio, categoria, descripcion, img) => {
 };
 
 const borrarProducto = (id) => {
-  return fetch(`http://localhost:3000/productos/${id}`, {
+  return fetch(`https://data-base-e-commerce.herokuapp.com/productos/${id}`, {
     method: "DELETE",
   });
 }
 
 const editarProducto = async (id, nombre, precio, descripcion, categoria, img) => {
 
-  return fetch(`http://localhost:3000/productos/${id}`, {
+  return fetch(`https://data-base-e-commerce.herokuapp.com/productos/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
