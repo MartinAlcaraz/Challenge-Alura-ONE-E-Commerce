@@ -51,7 +51,8 @@ const subirImagenCloudinary = (file) => {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
     },
-    data: formData        //console.log("Respuesta axios: ", response);     //console.log("URL de imagen: ", response.data.secure_url);   //console.log("Respuesta axios statusText: ", response.statusText);
+    data: formData,        //console.log("Respuesta axios: ", response);     //console.log("URL de imagen: ", response.data.secure_url);   //console.log("Respuesta axios statusText: ", response.statusText);
+    withCredentials: true   // cookies . probar si funciona.
   });
 
 }
