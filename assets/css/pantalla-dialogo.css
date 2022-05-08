@@ -14,15 +14,11 @@
 
 .pantalla-dialogo--enabled {
     display: block;
-
 }
-
 
 .pantalla-dialogo--exito--enabled {
     display: block;
 }
-
-
 
 
 /* Add Animation */
@@ -61,6 +57,10 @@
     box-shadow: 20px 20px 10px black;
 }
 
+.caja-dialogo--disabled {
+    display: none;
+}
+
 .caja-dialogo__texto {
     text-align: center;
 }
@@ -75,3 +75,20 @@
     width: 20vw;
     margin: auto;
 }
+
+.mensaje-espera {
+    display: none;
+    background-color: transparent;
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    text-align: center;
+    z-index: 1;
+    color: var(--texto-blanco);
+    width: 80vw;
+}
+
+.mensaje-espera--enabled {
+    display: block;
+}
+

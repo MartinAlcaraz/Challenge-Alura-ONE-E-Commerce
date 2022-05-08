@@ -4,7 +4,7 @@ export const nuevoItem = (id, nombre, precio, img) => {
     let item = document.createElement("div");
     item.classList.add("item");
     let content = `
-        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen producto"></a>
+        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen de ${nombre}"></a>
         <p class="item__nombre">${nombre}</p>
         <p class="item__precio">$ ${precio}</p>
         <a class="item__enlace" href="./productos-similares.html?id=${id}">Ver producto</a>`
@@ -18,7 +18,7 @@ export const nuevoItemEditarBorrar = (id, nombre, precio, img) => {
     let item = document.createElement("div");
     item.classList.add("item");
     let content = `
-        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen producto"></a>
+        <a href="./productos-similares.html?id=${id}"><img class="item__imagen" src="${img}" alt="imagen de ${nombre}"></a>
         <p class="item__nombre">${nombre}</p>
         <p class="item__precio">$ ${precio}</p>
         <a class="item__enlace" href="./productos-similares.html?id=${id}">Ver producto</a>
@@ -34,7 +34,7 @@ export const nuevoItemConDescripcion = (id, nombre, precio, descripcion, img) =>
     let item = document.createElement("div");
     let contenido = `
     <div class="item-seleccionado">
-        <img class="item-seleccionado__imagen" src=${img}>
+        <img class="item-seleccionado__imagen" src=${img} alt="imagen de ${nombre}">
         <div class="item-seleccionado__info">
             <p class="item-seleccionado__nombre">${nombre}</p>
             <p class="item-seleccionado__precio">$ ${precio}</p>

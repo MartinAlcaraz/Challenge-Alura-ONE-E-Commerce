@@ -10,6 +10,10 @@ const pantallaDialogo = document.querySelector("#pantalla-dialogo");
 const boton_aceptar = document.querySelector("[data-boton-aceptar]");
 const boton_cancelar = document.querySelector("[data-boton-cancelar]");
 
+const cajaDialogo = document.querySelector("#caja-dialogo");
+const mensajeEspera = document.querySelector("#mensaje-espera");
+
+
 // inputs de barra de busqueda
 const boton_form = document.querySelector("#input-boton");
 const input_buscador = document.querySelector("[data-tipo-buscador]");
@@ -74,6 +78,8 @@ boton_aceptar.addEventListener("click", () => {
     let data = getDatos();
     let file = document.querySelector("[data-input-imagen]").files[0];
     //console.log("file: ", file);
+    cajaDialogo.classList.add("caja-dialogo--disabled");
+    mensajeEspera.classList.add("mensaje-espera--enabled");
     subirProductoEImagen(file, data);
 });
 

@@ -9,6 +9,9 @@ const boton_cancelar = document.querySelector("[data-boton-cancelar]");
 
 const producto_descripcion = document.querySelector("[data-tipo-producto-descripcion]");
 
+const cajaDialogo = document.querySelector("#caja-dialogo");
+const mensajeEspera = document.querySelector("#mensaje-espera");
+
 let img_producto;
 
 const boton_form = document.querySelector("#input-boton");
@@ -20,6 +23,9 @@ addEventToInputBuscador(input_buscador, lista_desplegable, boton_form);
 
 
 boton_aceptar.addEventListener("click", () => {
+    
+    cajaDialogo.classList.add("caja-dialogo--disabled");
+    mensajeEspera.classList.add("mensaje-espera--enabled");
     borrarProductos();
 });
 

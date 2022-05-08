@@ -12,6 +12,8 @@ const input_precio = document.querySelector("[data-input-precio]");
 const input_descripcion = document.querySelector("[data-input-descripcion]");
 const input_categoria = document.querySelector("[data-input-categoria]");
 
+const cajaDialogo = document.querySelector("#caja-dialogo");
+const mensajeEspera = document.querySelector("#mensaje-espera");
 
 const pantallaDialogo = document.querySelector("#pantalla-dialogo");
 const boton_aceptar = document.querySelector("[data-boton-aceptar]");
@@ -94,6 +96,9 @@ boton_aceptar.addEventListener("click", () => {
 
         let data = getDatos();
         let file = document.querySelector("[data-input-imagen]").files[0];
+
+        cajaDialogo.classList.add("caja-dialogo--disabled");
+        mensajeEspera.classList.add("mensaje-espera--enabled");
 
         if (file == undefined) {    // si no se subió una imagen nueva se utiliza la que ya estaba guardada.
             data.img = img_old;
