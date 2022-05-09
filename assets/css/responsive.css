@@ -65,6 +65,13 @@
         top: -6px;
     }
 
+    /* =====   para aplicar estilo solo en Firefox   ===== */
+    @-moz-document url-prefix() {
+        .textarea__bar {
+            top: -3px;
+        }
+    }
+
     .todos-los-productos__boton {
         margin-top: 20px;
         padding: 14px 16px;
