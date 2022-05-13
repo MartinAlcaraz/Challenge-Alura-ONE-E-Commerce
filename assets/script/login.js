@@ -1,4 +1,4 @@
-import { validar } from "./validaciones.js";
+import { validar , formularioValido } from "./validaciones.js";
 import { addEventToInputsContacto } from "./script.js";
 
 const inputs_login = document.querySelectorAll(".input-login");
@@ -36,14 +36,11 @@ boton_entrar_login.addEventListener("click", (event) => {
         validar(input);
     });
 
-    let passwordCorrecto = true;
-
     // Abrir pagina si el password es correcto    
-    if ( passwordCorrecto){             
-        
+    if (formularioValido(inputs_login)) {
         window.open("./todos-los-productos.html", "_self");
+    }
+        
         // window.location.replace("./todos-los-productos.html");    alternativas para abrir una pagina
         // location.href="./todos-los-productos.html";  
-    }
-
 });

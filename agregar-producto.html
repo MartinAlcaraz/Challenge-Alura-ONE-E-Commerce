@@ -25,6 +25,7 @@
     <link href="./assets/css/bloque-productos-similares.css" rel="stylesheet" />
     <link href="./assets/css/bloque-todos-los-productos.css" rel="stylesheet" />
     <link href="./assets/css/bloque-agregar-producto.css" rel="stylesheet" />
+    <link href="./assets/css/pantalla-dialogo.css" rel="stylesheet" />
 
     <link href="./assets/css/bloque-informacion.css" rel="stylesheet" />
     <link href="./assets/css/info-quienes-somos.css" rel="stylesheet" />
@@ -54,8 +55,10 @@
             </div>
 
             <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on" required>
-                
+                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?"
+                    autocomplete="off" required>
+                <button class="menu_boton" id="input-boton"></button>
+                <ul class="caja-busqueda__lista" data-lista></ul>
             </form>
 
 
@@ -86,7 +89,7 @@
                             </div>
 
                             <input class="box-image__input--image agregar-producto__input" type="file" data-input-imagen
-                                data-tipo="imagen" name="img" accept="image/*" required>
+                                data-tipo="imagen" name="img" accept=".jpg, .jpeg, .png" required>
                             <img class="box-image__imagen-cargada" id="imagen-cargada">
                             <span class="message-error">Este campo no es valido</span>
                         </div>
@@ -117,11 +120,20 @@
                         <span class="message-error">Este campo no es valido</span>
                     </div>
 
+                    <!-- ==========  input categoria producto  ===========  -->
+                    <div class="input-container agregar-producto__input-container agregar-producto__input-container--select">
+                        <label class="agregar-producto__label" for="categoria">Elija una categoria:</label>
+                        <select class="input agregar-producto__input-select" id="categoria-producto" name="categoria" data-input-categoria>
+                            <option value="starwars">Starwars</option>
+                            <option value="consolas">Consolas</option>
+                            <option value="diversos">Diversos</option>
+                        </select>
+                    </div>
                     <!--  ========  input descripcion del producto  =========  -->
                     <div class="textarea-container agregar-producto__input-container">
                         <textarea class="textarea input agregar-producto__input" name="descripcion"
                             data-input-descripcion data-tipo="descripcion" type="text" rows="4" autocomplete="off"
-                            placeholder="Descripcion del producto" minlength="10" maxlength="100" required></textarea>
+                            placeholder="Descripcion del producto" minlength="10" maxlength="500" required></textarea>
                         <label class="textarea-label" for="descripcion">Descripcion del producto</label>
                         <span class="textarea__bar"></span>
                         <span class="message-error">Este campo no es valido</span>
@@ -132,7 +144,18 @@
                         value="Agregar producto" data-input-submit>
 
                 </form>
+                <div class="pantalla-dialogo" id="pantalla-dialogo">
+                    <div class="caja-dialogo" id="caja-dialogo">
+                        <p class="caja-dialogo__texto">Está seguro que desea agregar este producto?</p>
+                        <div class="caja-dialogo__botones">
+                            <button class="caja-dialogo__boton boton" data-boton-aceptar>Si</button>
+                            <button class="caja-dialogo__boton boton" data-boton-cancelar>No</button>
+                        </div>
+                    </div>
+                    <p class="mensaje-espera" id="mensaje-espera">Espere por favor...</p>
+                </div>
             </section>
+
         </div>
 
 
@@ -199,6 +222,11 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./controllers/agregar-producto.controller.js" type="module"></script>
     <script src="./assets/script/agregar-producto.js" type="module"></script>
 </body>
 

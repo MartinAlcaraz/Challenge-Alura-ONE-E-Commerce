@@ -6,10 +6,7 @@
 }
 
 .item-seleccionado__imagen {
-    background: url(../img/productos/starwars-02.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    object-fit: cover;
     height: 60vw;
     width: 100%;
 }

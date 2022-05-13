@@ -6,14 +6,9 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-.bloque__todos-los-productos--enabled {
-    display: block;
+.productos__titulo--categoria {
+    text-transform: capitalize;
 }
-
-.bloque__todos-los-productos--visible {
-    opacity: 1;
-}
-
 
 .grilla--todos-los-productos .item:nth-of-type(n+ 5){
     display: block;             

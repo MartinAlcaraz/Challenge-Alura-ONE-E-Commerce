@@ -54,8 +54,9 @@
             </div>
 
             <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on" required>
-                
+                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="off" required>
+                <button class="menu_boton" id="input-boton"></button>
+                <ul class="caja-busqueda__lista" data-lista></ul>
             </form>
         </nav>
     </header>
@@ -68,12 +69,12 @@
             <section class="productos productos--todos-los-productos">
 
                 <div class="productos__encabezado todos-los-productos__encabezado">
-                    <h2 class="productos__titulo">Todos los productos</h2>
+                    <h2 class="productos__titulo">Todos los productos <span class="productos__titulo--categoria" id="categoria-producto"></span></h2>
                     <a class="boton todos-los-productos__boton" href="./agregar-producto.html" id="boton-agregar-producto">Agregar producto</a>
                 </div>
 
-                <div class="grilla grilla--todos-los-productos">
-                    <div class="item">
+                <div class="grilla grilla--todos-los-productos" data-tipo-grillaTodosLosProductos>
+                    <!-- <div class="item">
                         <a href="#"><img class="item__imagen" src="./assets/img/productos/starwars-01.png"
                                 alt="imagen producto"></a>
                         <p class="item__nombre">Producto XYZ</p>
@@ -226,7 +227,7 @@
                         <p class="item__nombre">Producto XYZ</p>
                         <p class="item__precio">$ 60.00</p>
                         <a class="item__enlace" href="#">Ver producto</a>
-                    </div>
+                    </div> -->
 
                 </div>
             </section>
@@ -295,6 +296,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="./controllers/todos.los.productos.controller.js" type="module"></script>
     <script src="./assets/script/todos-los-productos.js" type="module"></script>
 </body>
 

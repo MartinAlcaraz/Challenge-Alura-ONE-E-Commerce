@@ -53,9 +53,10 @@
                 <a class="menu__login-boton  boton" id="boton-login" href="./login.html">Login</a>
             </div>
 
-            <form class="menu__caja-busqueda" action="">
-                <input type="text" class="menu__input-buscador" placeholder="Que desea buscar?" autocomplete="on" required>
-                
+            <form class="menu__caja-busqueda" action="" >
+                <input type="text" class="menu__input-buscador" data-tipo-buscador placeholder="Que desea buscar?" autocomplete="off" required>
+                <button class="menu_boton" id="input-boton"></button>
+                <ul class="caja-busqueda__lista" data-lista></ul>
             </form>
 
 
@@ -78,20 +79,20 @@
 
         <!-- =============== bloque productos ================= -->
         <div class="bloque__productos" id="bloque-productos">
-            <section class="productos productos--starwars">
+
+            <section class="productos productos--starwars" >
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Starwars</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=starwars">Starwars</a></h2>
+                    <a href="./login.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
-
-                <div class="grilla">
-                    <div class="item">
-                        <a href="productos-similares.html"><img class="item__imagen" src="./assets/img/productos/starwars-01.png"
+                <div class="grilla" data-tipo-grilla-starwars>
+                    <!-- <div class="item">
+                        <a href="productos-similares.html"><img class="item__imagen" src="https://res.cloudinary.com/imagenes-cloudinary/image/upload/v1651859154/iobkb4hecwcjwjtbcguv.png"
                                 alt="imagen producto"></a>
-                        <p class="item__nombre">Producto XYZ</p>
+                        <p class="item__nombre">Yoda de cloudinary</p>
                         <p class="item__precio">$ 60.00</p>
                         <a class="item__enlace" href="#">Ver producto</a>
                     </div>
@@ -129,7 +130,7 @@
                         <p class="item__nombre">Producto XYZ</p>
                         <p class="item__precio">$ 60.00</p>
                         <a class="item__enlace" href="#">Ver producto</a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -138,14 +139,14 @@
             <section class="productos productos--consolas" id="seccion-consolas">
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Consolas</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=consolas">Consolas</a></h2>
+                    <a href="./login.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
                 <div class="productos__grilla-container">
 
-                    <div class="grilla">
+                    <div class="grilla" data-tipo-grilla-consolas>
                         <div class="item">
                             <a href="#"><img class="item__imagen" src="./assets/img/productos/consolas-01.png"
                                     alt="imagen producto"></a>
@@ -202,13 +203,13 @@
             <section class="productos productos--diversos">
 
                 <div class="productos__encabezado">
-                    <h2 class="productos__titulo">Diversos</h2>
-                    <a href="#" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
+                    <h2 class="productos__titulo"><a class="productos__titulo--link" href="./todos-los-productos.html?categoria=diversos">Diversos</a></h2>
+                    <a href="./login.html" class="productos__ver-todo">Ver todo <img class="productos__ver-todo--flecha"
                             src="./assets/img/flecha.svg"></a>
                 </div>
 
                 <div class="productos__grilla-container">
-                    <div class="grilla">
+                    <div class="grilla" data-tipo-grilla-diversos>
 
                         <div class="item">
                             <a href="#"><img class="item__imagen" src="./assets/img/productos/diversos-01.png"
@@ -326,6 +327,7 @@
         <p class="footer__texto">Desarrollado por A. Martin Alcaraz</p>
         <p class="footer__texto">2022 &copy; </p>
     </footer>
+    <script src="./controllers/lista.productos.controller.js" type="module"></script>
     <script src="./assets/script/script.js" type="module"></script>
 </body>
 

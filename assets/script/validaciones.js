@@ -48,6 +48,16 @@ export const habilitarBotonSubmit = (inputs, boton_submit) => {
     }
 }
 
+export const formularioValido = (inputs) => {
+    let esValido = true;
+    inputs.forEach((input) => {
+        if (input.validity.valid == false) {
+            esValido = false;
+        }
+    });
+    return esValido;
+}
+
 const validadores = {
     nombre: (input) => validarNombre(input),        // para cada tipo de input (data-tipo-nombre por ejemplo)
     email: (input) => validarEmail(input),          // existe una llave del objeto validadores para que se ejecute
@@ -99,8 +109,8 @@ const validarDescripcion = (input) => {
     if (texto.length < 10) {
         mensaje = "La descripcion tiene que tener al menos 10 caracteres."
     } else {
-        if (texto.length > 300) {
-            mensaje = "La descripcion tiene que tener menos de 300 caracteres."
+        if (texto.length > 500) {
+            mensaje = "La descripcion tiene que tener menos de 500 caracteres."
         }
     }
     input.setCustomValidity(mensaje);
@@ -257,7 +267,7 @@ const mensajeDeErrores = {
         valueMissing: "Ingrese una imagen. ",
         // tooLong: "El asunto no puede tener mas de 50 caracteres. ",
         // tooShort: "El asunto tiene que tener al menos 3 caracteres.",
-        customError: "",
+        customError: "No es un archivo de imagen",
     },
 }
 
@@ -266,11 +276,11 @@ function mostrarMensajeDeError(input, tipoDeInput) {
     let mensajes = "";
     tipoDeErrores.forEach((error) => {
 
-        if (input.validity[error]) {
-
+        if (input.validity[error] && mensajes == "") {
             //console.log(mensajeDeErrores[tipoDeInput][error]);
             mensajes += mensajeDeErrores[tipoDeInput][error];
         }
+
     });
     return mensajes;
 
